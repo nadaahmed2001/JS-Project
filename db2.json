@@ -1,0 +1,42 @@
+[
+    {
+        "image": "./images/n1.jpg",
+        "name": "Cartoon Astronaut T-shirt",
+        "price": "78"
+      }
+,{
+    "image": "./images/n2.jpg",
+ "name": "Cartoon Astronaut T-shirt",
+        "price": "70"
+}  
+,{
+    "image": "./images/n3.jpg",
+    "name": "Cartoon Astronaut T-shirt",
+           "price": "76"
+   }    
+   ,{
+    "image": "./images/n4.jpg",
+    "name": "Cartoon Astronaut T-shirt",
+           "price": "71"
+   }    
+   ,{
+    "image": "./images/n5.jpg",
+    "name": "Cartoon Astronaut T-shirt",
+           "price": "69"
+   }    
+   ,{
+    "image": "./images/n6.jpg",
+    "name": "Cartoon Astronaut T-shirt",
+           "price": "80"
+   }    
+   ,{
+    "image": "./images/n7.jpg",
+    "name": "Cartoon Astronaut Pants",
+           "price": "50"
+   }    
+   ,{
+    "image": "./images/n8.jpg",
+    "name": "Cartoon Astronaut T-shirt",
+           "price": "65"
+   }        
+]
