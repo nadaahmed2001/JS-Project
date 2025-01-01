@@ -463,6 +463,11 @@ left: 0;
     white-space:nowrap;
     border-top-right-radius: 0;
     border-bottom-left-radius: 0;
+   
+}
+#newsletter button a{
+    text-decoration: none;
+    color: #fff;
 }
 /*Footer*/
 footer{
