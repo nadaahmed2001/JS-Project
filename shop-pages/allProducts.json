@@ -1,0 +1,82 @@
+[
+    {
+        "image": "../images/f1.jpg",
+        "name": "Cosmic Dreamer Vibes",
+        "price": "78"
+    },
+    {
+        "image": "../images/f2.jpg",
+        "name": "Lost In Space",
+        "price": "70"
+    },
+    {
+        "image": "../images/f3.jpg",
+        "name": "Galaxy Explorer Mode",
+        "price": "76"
+    },
+    {
+        "image": "../images/f4.jpg",
+        "name": "Stellar Adventure Begins",
+        "price": "71"
+    },
+    {
+        "image": "../images/f5.jpg",
+        "name": "Interstellar Journey Ahead",
+        "price": "69"
+    },
+    {
+        "image": "../images/f6.jpg",
+        "name": "Cartoon Astronaut T-shirt",
+        "price": "80"
+    },
+    {
+        "image": "../images/f7.jpg",
+        "name": "Cartoon Astronaut Pants",
+        "price": "50"
+    },
+    {
+        "image": "../images/f8.jpg",
+        "name": "Moonwalker On Duty",
+        "price": "65"
+    },
+    {
+        "image": "../images/n1.jpg",
+        "name": "Class In Action",
+        "price": "112"
+    },
+    {
+        "image": "../images/n2.jpg",
+        "name": "Simply Refined Style",
+        "price": "98"
+    },
+    {
+        "image": "../images/n3.jpg",
+        "name": "Exquisite Sophistication Defined",
+        "price": "123"
+    },
+    {
+        "image": "../images/n4.jpg",
+        "name": "Timeless Elegance Always",
+        "price": "101"
+    },
+    {
+        "image": "../images/n5.jpg",
+        "name": "Graceful And Polished",
+        "price": "149"
+    },
+    {
+        "image": "../images/n6.jpg",
+        "name": "Elegance Through Simplicity",
+        "price": "99"
+    },
+    {
+        "image": "../images/n7.jpg",
+        "name": "Uncompromising Quality Always",
+        "price": "87"
+    },
+    {
+        "image": "../images/n8.jpg",
+        "name": "Refined Yet Bold",
+        "price": "103"
+    }
+]
