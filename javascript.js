@@ -126,3 +126,5 @@ if (closes) {
     nav.classList.remove('active');  // Hide the menu
   });
 }
+//signin-validation
+

@@ -1,42 +1,42 @@
 [
     {
         "image": "./images/n1.jpg",
-        "name": "Cartoon Astronaut T-shirt",
-        "price": "78"
+        "name": "Class In Action",
+        "price": "112"
       }
 ,{
     "image": "./images/n2.jpg",
- "name": "Cartoon Astronaut T-shirt",
-        "price": "70"
+ "name": "Simply Refined Style",
+        "price": "98"
 }  
 ,{
     "image": "./images/n3.jpg",
-    "name": "Cartoon Astronaut T-shirt",
-           "price": "76"
+    "name": "Exquisite Sophistication Defined",
+           "price": "123"
    }    
    ,{
     "image": "./images/n4.jpg",
-    "name": "Cartoon Astronaut T-shirt",
-           "price": "71"
+    "name": "Timeless Elegance Always",
+           "price": "101"
    }    
    ,{
     "image": "./images/n5.jpg",
-    "name": "Cartoon Astronaut T-shirt",
-           "price": "69"
+    "name": "Graceful And Polished",
+           "price": "149"
    }    
    ,{
     "image": "./images/n6.jpg",
-    "name": "Cartoon Astronaut T-shirt",
-           "price": "80"
+    "name": "Elegance Through Simplicity",
+           "price": "99"
    }    
    ,{
     "image": "./images/n7.jpg",
-    "name": "Cartoon Astronaut Pants",
-           "price": "50"
+    "name": "Uncompromising Quality Always",
+           "price": "87"
    }    
    ,{
     "image": "./images/n8.jpg",
-    "name": "Cartoon Astronaut T-shirt",
-           "price": "65"
+    "name": "Refined Yet Bold",
+           "price": "103"
    }        
 ]

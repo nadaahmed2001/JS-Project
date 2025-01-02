@@ -1,27 +1,27 @@
 [
     {
         "image": "./images/f1.jpg",
-        "name": "Cartoon Astronaut T-shirt",
+        "name": "Cosmic Dreamer Vibes",
         "price": "78"
       }
 ,{
     "image": "./images/f2.jpg",
- "name": "Cartoon Astronaut T-shirt",
+ "name": "Lost In Space",
         "price": "70"
 }  
 ,{
     "image": "./images/f3.jpg",
-    "name": "Cartoon Astronaut T-shirt",
+    "name": "Galaxy Explorer Mode",
            "price": "76"
    }    
    ,{
     "image": "./images/f4.jpg",
-    "name": "Cartoon Astronaut T-shirt",
+    "name": "Stellar Adventure Begins",
            "price": "71"
    }    
    ,{
     "image": "./images/f5.jpg",
-    "name": "Cartoon Astronaut T-shirt",
+    "name": "Interstellar Journey Ahead",
            "price": "69"
    }    
    ,{
@@ -36,7 +36,7 @@
    }    
    ,{
     "image": "./images/f8.jpg",
-    "name": "Cartoon Astronaut T-shirt",
+    "name": "Moonwalker On Duty",
            "price": "65"
    }        
 ]
