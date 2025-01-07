@@ -1,0 +1,85 @@
+body{
+    /* background-color: #E3E6F3; */
+    background-image: url(./images/hero4.png);
+}
+
+#myForm {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    border: 1px solid #ddd;
+    padding: 30px 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+#myForm .form-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+#myForm .form-control {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+#myForm .form-control:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#myForm .input-group {
+    position: relative;
+}
+
+#myForm .input-group-text {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-left: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+}
+
+#myForm .input-group-text i {
+    color: #007bff; /* Eye icon color */
+}
+
+#myForm button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+#myForm button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    #myForm {
+        padding: 20px;
+        max-width: 90%;
+    }
+}
