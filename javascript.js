@@ -18,7 +18,7 @@ xhr.onload = function () {
       var productHTML = `
                 <div class="pro">
                     <img src="${product.image}" alt="Product Image"
-                      onClick="window.location.href='./shop-pages/singleProduct.html'"
+                      onClick="window.location.href='./shop-pages/singleProduct.html?id=${product.id}'"
                       >
                     <div class="des">
                         <span>Brand Name</span>

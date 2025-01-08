@@ -15,7 +15,7 @@ xhr.onload = function () {
         var productHTML = `
                     <div class="pro">
                         <img src="${product.image}" alt="Product Image"
-                        onClick="window.location.href='singleProduct.html'"
+                        onClick="window.location.href='singleProduct.html?id=${product.id}'"
                         >
                         <div class="des">
                             <span>Brand Name</span>
@@ -40,7 +40,7 @@ xhr.onload = function () {
         var productHTML = `
                     <div class="pro">
                         <img src="${product.image}" alt="Product Image"
-                        onClick="window.location.href='singleProduct.html'"
+                        onClick="window.location.href='singleProduct.html?id=${product.id}'"
                         >
                         <div class="des">
                             <span>Brand Name</span>
