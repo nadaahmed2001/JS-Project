@@ -75,7 +75,9 @@ xhr2.onload = function () {
     data2.forEach(function (product) {
       var productHTML = `
                 <div class="pro">
-                    <img src="${product.image}" alt="Product Image">
+                    <img src="${product.image}" alt="Product Image"
+                      onClick="window.location.href='./shop-pages/singleProduct.html?id=${product.id}'"
+                      >
                     <div class="des">
                         <span>Brand Name</span>
                         <h5>${product.name}</h5> <!-- Dynamically inserting the name -->
