@@ -1,84 +1,57 @@
-(function () {
-    const form = document.querySelector('#contact-form');
-    form.addEventListener('submit', function (e) {
-        e.preventDefault(); // Prevent form from reloading the page
-        const formData = new FormData(form);
-        fetch('https://jsonplaceholder.typicode.com/posts', {
-            method: 'POST',
-            body: formData,
-            headers: {
-                Accept: 'application/json'
-            }
-        }).then(response => {
-                if (response.ok) {
-                    form.reset();
-                    alert('Form submitted successfully');
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                console.error(error);
-                alert('Form submission failed');
-            });
-    });    
-})();
-
 document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contact-form');
-    
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); // Prevent form submission for validation
+    const form = document.querySelector('#contact-form');
+    const successAlert = document.querySelector('.contact-success-alert');
 
-        // Clear previous error messages
-        document.querySelectorAll('.error-message').forEach(el => el.remove());
+    // Form validation logic
+    const validators = {
+        'first-name': (value) => value.trim() ? '' : 'First name is required.',
+        'last-name': (value) => value.trim() ? '' : 'Last name is required.',
+        'email': (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()) ? '' : 'Please enter a valid email address.',
+        'phone': (value) => /^\d{10}$/.test(value.trim()) ? '' : 'Please enter a valid phone number.',
+        'message': (value) => value.trim() ? '' : 'Message is required.',
+    };
 
-        let isValid = true;
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        clearErrors();
 
-        // Validate first name
-        const firstName = document.getElementById('first-name');
-        if (!firstName.value.trim()) {
-            isValid = false;
-            showError(firstName, 'First name is required.');
-        }
+        const isValid = validateForm();
+        if (!isValid) return;
 
-        // Validate last name
-        const lastName = document.getElementById('last-name');
-        if (!lastName.value.trim()) {
-            isValid = false;
-            showError(lastName, 'Last name is required.');
-        }
+        try {
+            const formData = new FormData(form);
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+                method: 'POST',
+                body: formData,
+                headers: { Accept: 'application/json' },
+            });
 
-        // Validate email
-        const email = document.getElementById('email');
-        if (!validateEmail(email.value.trim())) {
-            isValid = false;
-            showError(email, 'Please enter a valid email address.');
-        }
+            if (!response.ok) throw new Error('Form submission failed');
 
-        // Validate phone number
-        const phone = document.getElementById('phone');
-        if (!validatePhone(phone.value.trim())) {
-            isValid = false;
-            showError(phone, 'Please enter a valid phone number.');
-        }
-
-        // Validate message
-        const message = document.getElementById('message');
-        if (!message.value.trim()) {
-            isValid = false;
-            showError(message, 'Message is required.');
-        }
-
-        // If all validations pass, submit the form
-        if (isValid) {
-            console.log('Form submitted successfully!');
-            // Simulate form submission
-            alert('Form submitted successfully!');
+            form.reset();
+            showSuccessAlert();
+        } catch (error) {
+            console.error(error);
+            alert('Form submission failed');
         }
     });
 
-    // Helper function to show error message
+    // Helper functions
+    function validateForm() {
+        let isValid = true;
+
+        Object.keys(validators).forEach((fieldId) => {
+            const field = document.getElementById(fieldId);
+            const errorMessage = validators[fieldId](field.value);
+            if (errorMessage) {
+                isValid = false;
+                showError(field, errorMessage);
+            }
+        });
+
+        return isValid;
+    }
+
     function showError(input, message) {
         const error = document.createElement('p');
         error.className = 'error-message';
@@ -88,16 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
         input.parentElement.appendChild(error);
     }
 
-    // Helper function to validate email
-    function validateEmail(email) {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return regex.test(email);
+    function clearErrors() {
+        document.querySelectorAll('.error-message').forEach((el) => el.remove());
     }
 
-    // Helper function to validate phone number
-    function validatePhone(phone) {
-        const regex = /^\d{10}$/; // Validates 10-digit phone numbers
-        return regex.test(phone);
+    function showSuccessAlert() {
+        successAlert.style.display = 'block';
+        successAlert.textContent = 'Your response is successfully submitted';
     }
 });
-
