@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    
     <!--=============== FLATICON ===============-->
     <link
       rel="stylesheet"
@@ -18,10 +18,36 @@
 
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <link rel="stylesheet" href="../icons/all.css" />
 
     <title>Ecommerce Website</title>
   </head>
   <body>
+    <section id="header">
+      <a href="#"><img src="../images/logo.png" class="logo" alt="Logo" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a  href="../index.html">Home</a></li>
+          <li><a  href="shop.html">Shop</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li class="bag">
+            <a class="active" href="../cart.html"><i class="fa-solid fa-bag-shopping "></i></a>
+          </li>
+          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="../cart.html" class="active"><i class="fa-solid fa-bag-shopping "></i></a>
+        <i id="bar" class="fa-solid fa-outdent"></i>
+      </div>
+    </section>
+
+
+
     <!--=============== MAIN ===============-->
     <main class="main">
       <!--=============== CART ===============-->
@@ -190,7 +216,52 @@
         </div>
       </section>
     </main>
-
+    <footer class="section-p1">
+      <div class="col">
+          <img class="logo" src="./images/logo.png" alt="">
+          <h4>Contact</h4>
+          <p><strong>Address:</strong>562 Wellington Road /Street 32, San Francisco</p>
+          <p><strong>Phone:</strong>+01 2222 365 /(+91)01 2345 6789</p>
+          <p><strong>Hours:</strong>10:00 - 18:00, Mon - Sat</p>
+          <div class="follow">
+              <h4>Follow Us</h4>
+              <div class="icons">
+                  <i class="fa-brands fa-facebook-f"></i>
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-pinterest"></i>
+                  <i class="fa-brands fa-youtube"></i>
+              </div>
+          </div>
+      </div>
+  <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms&Conditions</a>
+      <a href="#">Contact Us</a>
+  </div>
+  <div class="col">
+      <h4>My Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+  </div>
+  <div class="col install">
+  <h4>Install App</h4>
+  <p>FRom App Store or Google Play</p>
+  <div class="row">
+      <img src="./images/app.jpg" alt="">
+      <img src="images/play.jpg" alt="">
+  </div>
+  <p>Secured Payment Gat</p>
+  <img src="./images/pay.png">
+  </div>
+  <div class="copyright">&copy; 2022, Tech etc - HTML CSS Ecommerse Template </div>
+  </footer>
 
     <!--=============== SWIPER JS ===============-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
