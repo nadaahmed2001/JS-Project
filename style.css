@@ -637,6 +637,173 @@ footer .copyright{
 #prodDetails .single-prod-details  span{
     line-height: 30px;
 }
+/*********************/
+
+/* blog */
+#page_header.blog-header
+{
+    background-image: url(images/Blog_About/back19.jpg);
+    background-size: cover;
+    width:100%;
+    height:250px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* #de ely zabteto 5aleto f el nos  w fe benhom space*/
+    flex-direction: column;
+    padding: 14px;
+
+}
+
+
+
+
+#page_header.blog-header h2
+{
+    font-size: 46px;
+    /* line-height: 54px; */
+    color: white;
+}
+
+#page_header.blog-header p
+{
+    font-size: 20px;
+    color: white;
+    margin:15px 0 20px 0  ;
+}
+
+
+#blog-section
+{
+    padding: 150px 150px 0 150px;
+}
+#blog-section .blog-section-box{
+/* # to put el klam kolo h ,p in one row */
+    display:flex;
+    align-items: center;
+    width: 100%;
+    /* mn 8erha el 13/01 m4 hatzhar aslan l2nha ta7t ma3mola absolute */
+    position: relative;
+
+    /* to make space between boxs */
+    padding-bottom: 90px;
+
+
+}
+
+#blog-section .blog-section-box h1{
+    position:absolute;
+    top:-40px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9cbce;
+    z-index: -3 ; /* 3l4an tb2a wara elsora */
+    
+    
+}
+#blog-section .blog-section-img{
+
+    width: 50%;
+    margin-right: 40px;
+
+}
+
+#blog-section img{
+    width:100%;
+    height: 300px;
+    /* 3l4an el img matb2a4 bahta kda  */
+    object-fit: cover;
+
+}
+
+#blog-section .blog-section-detailes{
+
+    width: 50%;
+
+}
+#blog-section .blog-section-detailes a 
+{
+text-decoration: none;
+font-size: 11px;
+color:#000;
+font-weight: 700;
+position: relative;
+/* 3l4an y8yar el lon btare2a abt2 4waya w ykon smooth  */
+transition: 0.4s;
+
+}
+
+#blog-section .blog-section-detailes  a::after{
+    content: "";
+    width: 50px;
+    height:1px;
+    background-color: #000;
+    position:absolute;
+    top:4px;
+    right: -60px;
+
+}
+
+#blog-section .blog-section-detailes a:hover 
+{
+    color :#088178;
+}
+
+
+
+/* About*/
+
+
+#page_header.about-header
+{
+    background-image: url(images/Blog_About/banner.png);
+    background-size: cover;
+    width:100%;
+    height:250px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* #de ely zabteto 5aleto f el nos  w fe benhom space*/
+    flex-direction: column;
+    padding: 14px;
+
+}
+
+
+#about-head{
+ display:flex;
+ align-items: center;
+}
+#about-head img{
+width: 50%;
+height: auto;
+
+}
+#about-head div{
+    padding-left: 40px;
+
+}
+
+#about-app {
+    text-align: center;
+}    
+#about-app .video {
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+#about-app .video video
+{
+ width:70%;
+ height:100%;
+ border-radius: 20px;
+
+}
+
+
+
+
 
 
 /*Responsive Home*/
@@ -793,4 +960,44 @@ footer .copyright{
     #prodDetails .single-prod-details{
         width: 100%;
     }
+
+
+    /* Blog page */
+    #blog {
+        padding: 100px 20px 0 20px;
+        }
+        #blog .blog-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        }
+        #blog .blog-img {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        }
+        #blog .blog-details {
+        width: 100%;
+        }
+        /*About*/
+        /* About Page */
+        #about-head {
+         flex-direction: column;
+        }
+        #about-head img {
+         width: 100%;
+         margin-bottom: 20px;
+        }
+        #about-head div {
+         padding-left: 0px;
+        } 
+        #about-app .video{
+            width:100%;
+            height:100%;
+            margin: 30px auto 0 auto ;
+        }
+        
+
+
+
 }
