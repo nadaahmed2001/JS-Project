@@ -250,26 +250,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     ];
-     // State to track the current page
+     //track the current page
      let currentPage = 0;
 
-     // Function to update the content based on page range
+     // update content based on page range
      const updateBlogSection = (startIndex, endIndex) => {
          blogSection.innerHTML = sections.slice(startIndex, endIndex).join('');
      };
      
-       // Function to handle pagination logic
     const handlePagination = (page) => {
         if (page === "start") {
             // For "start", show posts 1 to 5 (index 0 to 4)
             updateBlogSection(0, 5);
             currentPage = 0;
         } else if (page === "1") {
-            // Page 1, show posts 1 to 5 (index 0 to 4)
             updateBlogSection(0, 5);
             currentPage = 1;
         } else if (page === "2") {
-            // Page 2, show posts 3 to 7 (index 2 to 6)
             updateBlogSection(2, 7);
             currentPage = 2;
         } else if (page === "3") {
@@ -277,20 +274,20 @@ document.addEventListener("DOMContentLoaded", () => {
             updateBlogSection(5, 10);
             currentPage = 3;
         } else if (page === "next") {
-            // Handle "next" button functionality to move through pages
+
             if (currentPage < 3) {
                 currentPage += 1;
             } else {
                 currentPage = 0; // Loop back to the first page
             }
             if (currentPage === 0) {
-                updateBlogSection(0, 5); // Show posts 1 to 5
+                updateBlogSection(0, 5); 
             } else if (currentPage === 1) {
-                updateBlogSection(0, 5); // Show posts 1 to 5
+                updateBlogSection(0, 5); 
             } else if (currentPage === 2) {
-                updateBlogSection(2, 7); // Show posts 3 to 7
+                updateBlogSection(2, 7); 
             } else if (currentPage === 3) {
-                updateBlogSection(5, 10); // Show posts 5 to 10
+                updateBlogSection(5, 10); 
             }
         }
     };
@@ -302,93 +299,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-    // // Function to show sections based on page
-    // const updateBlogSection = (startIndex, endIndex) => {
-    //     blogSection.innerHTML = sections.slice(startIndex, endIndex).join('');
-    // };
 
-    // // Function to update content for different pages
-    // const handlePagination = (page) => {
-    //     if (page === "start") {
-    //         // For "start" page, show posts 1 to 5 (index 0 to 4)
-    //         updateBlogSection(0, 5);
-    //     } else if (page === "1") {
-    //         // Page 1, show posts 1 to 5 (index 0 to 4)
-    //         updateBlogSection(0, 5);
-    //     } else if (page === "2") {
-    //         // Page 2, show posts 3 to 7 (index 2 to 6)
-    //         updateBlogSection(3, 8);
-    //     } else if (page === "3") {
-    //         // Page 3, show posts 5 to 10 (index 4 to 9)
-    //         updateBlogSection(5, 10);
-    //     } else if (page === "next") {
-    //         const currentIndex = sections.findIndex(
-    //             (section) => section === blogSection.innerHTML
-    //         );
-
-    //         const nextPageStart = currentIndex + 1;
-    //         const nextPageEnd = Math.min(nextPageStart + 5, sections.length);
-    //         updateBlogSection(nextPageStart, nextPageEnd);
-    //     }
-    // };
-
-    // // Add click event listeners to the buttons
-    // paginationButtons.forEach((button) => {
-    //     button.addEventListener("click", () => {
-    //         const page = button.getAttribute("data-page");
-    //         handlePagination(page);
-    //     });
-    // });
-
-    // // Function to show all sections when "start" is clicked
-    // const showAllSections = () => {
-    //     blogSection.innerHTML = sections.join(''); // Join all sections together
-    // };
-
-    // // Function to update the content
-    // const updateBlogSection = (index) => {
-    //     blogSection.innerHTML = sections[index];
-    // };
-
-    // // Add click event listeners to the buttons
-    // paginationButtons.forEach((button) => {
-    //     button.addEventListener("click", () => {
-    //         const page = button.getAttribute("data-page");
-
-    //         if (page === "start") {
-    //             showAllSections(); 
-    //             //updateBlogSection(0);
-    //         } else if (page === "1") {
-    //             updateBlogSection(0);
-    //         } else if (page === "2") {
-    //             updateBlogSection(1);
-    //         } else if (page === "3") {
-    //             updateBlogSection(2);
-    //         } else if (page === "next") {
-    //             const currentIndex = sections.findIndex(
-    //                 (section) => section === blogSection.innerHTML
-    //             );
-    //             const nextIndex = (currentIndex + 1) % sections.length;
-    //             updateBlogSection(nextIndex);
-    //         }
-    //     });
-    // });
-//});
 
 
 
 
   
-
-//////////////////////////////////
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const carousel = new bootstrap.Carousel('#testimonialCarousel', {
-      interval: 4000,
-      ride: 'carousel'
-    });
-  });
