@@ -44,7 +44,7 @@
     </section>
 
     <section class="product1" id="product1">
-      <h2>Featured Products</h2>
+      <h2>See Also</h2>
       <!-- Container for filtered products -->
       <div class="pro-container"></div>
     </section>
@@ -114,20 +114,7 @@
       </div>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () { //To make sure the script runs after the DOM is fully loaded
-          var MainImage = document.getElementById("MainImage");
-          var smallimage = document.getElementsByClassName("small-img");
-      
-          // Loop over all small images and add the click event
-          for (let i = 0; i < smallimage.length; i++) {
-            smallimage[i].onclick = function () {
-              MainImage.src = smallimage[i].src;
-            };
-          }
-        });
-      </script>
-      
+
     <script src="shop.js" type="module"></script>
     <script src="product-details.js" type="module"></script>
   </body>
