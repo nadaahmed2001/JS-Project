@@ -147,6 +147,7 @@ left: 0;
 #hero h1{
     color:#088178    
 }
+
 #hero button{
     background-image: url(./images/button.png);
     background-color: transparent;
@@ -156,6 +157,10 @@ left: 0;
     cursor: pointer;
     font-weight:700;
     font-size:15px;
+}
+#hero button a {
+    text-decoration: none;
+    color:#088178;
 }
 /*feature*/
 #feature{

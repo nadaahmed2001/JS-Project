@@ -4,7 +4,7 @@ const productId = urlParams.get("id");
 
 if (productId) {
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "allProducts.json", true);
+  xhr.open("GET", "../database/allProducts.json", true);
 
   xhr.onload = function () {
     if (xhr.status === 200) {
@@ -23,13 +23,7 @@ if (productId) {
       <div class="single-prod-details">
         <h6>${product.name}</h6>
         <h2>$${product.price}</h2>
-        <select>
-          <option>Select Size</option>
-          <option>Small</option>
-          <option>Medium</option>
-          <option>Large</option>
-          <option>Extra Large</option>
-        </select>
+
         <input type="number" value="1" />
         <button class="normal">Add To Cart</button>
         <h2>Product Details</h2>
