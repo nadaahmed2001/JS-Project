@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
-  // Add to local storage
+  // Add to local storage 
   function addToCart(product) {
     // Retrieve the current cart from localStorage or initialize it
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
