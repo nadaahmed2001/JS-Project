@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--=============== FLATICON ===============-->
+    <link
+      rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"/>
+
+    <!--=============== SWIPER CSS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="/modules/cart/cart.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/icons/all.css" />
+
+    <title>Ecommerce Website</title>
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"><img src="../../images/logo.png" class="logo" alt="Logo" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../shop-pages/shop.html">Shop</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="/modules/contact/contact.html">Contact</a></li>
+          <li class="bag">
+            <a class="active" href="/modules/cart/cart.html"
+              ><i class="fa-solid fa-bag-shopping"></i
+            ></a>
+          </li>
+          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="/modules/cart/cart.html" class="active"
+          ><i class="fa-solid fa-bag-shopping"></i
+        ></a>
+        <i id="bar" class="fa-solid fa-outdent"></i>
+      </div>
+    </section>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== CART ===============-->
+      <section class="cart section--lg container">
+        <div class="table__container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th>Rename</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- <tr>
+                <td>
+                  <img
+                    src="./assets//img/product-2-1.jpg"
+                    alt=""
+                    class="table__img"
+                  />
+                </td>
+                <td>
+                  <h3 class="table__title">
+                    Amazon Brand - Daily Ritual Women's Jersey
+                  </h3>
+                  <p class="table__description">
+                    Lorem ipsum dolor sit amet consectetur.
+                  </p>
+                </td>
+                <td>
+                  <span class="table__price">$110</span>
+                </td>
+                <td><input type="number" value="3" class="quantity" /></td>
+                <td><span class="subtotal">$220</span></td>
+                <td><i class="fi fi-rs-trash table__trash"></i></td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cart__actions">
+          <a href="#" class="btn flex btn__md">
+            <i class="fi-rs-shuffle"></i> Update Cart
+          </a>
+          <a href="#" class="btn flex btn__md">
+            <i class="fi-rs-shopping-bag"></i> Continue Shopping
+          </a>
+        </div>
+
+        <div class="divider">
+          <i class="fi fi-rs-fingerprint"></i>
+        </div>
+
+        <div class="cart__group grid">
+          <div>
+            <div class="cart__coupon">
+              <h3 class="section__title">Apply Coupon</h3>
+              <form action="" class="coupon__form form grid">
+                <div class="form__group grid">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Enter Your Coupon"
+                  />
+                  <div class="form__btn">
+                    <button class="btn flex btn--sm">
+                      <i class="fi-rs-label"></i> Apply
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="cart__total">
+            <h3 class="section__title">Cart Totals</h3>
+            <table class="cart__total-table">
+              <tr>
+                <td><span class="cart__total-title cart_subtotal">Cart Subtotal</span></td>
+                <td><span class="cart__total-price cart__subtotal-value">$0.00</span></td>
+              </tr>
+              <tr>
+                <td><span class="cart__total-title shipping_cart">Shipping</span></td>
+                <td><span class="cart__total-price cart__shipping-value">$10.00</span></td>
+              </tr>
+              <tr>
+                <td><span class="cart__total-title grand_total">Total</span></td>
+                <td><span class="cart__total-price cart__total-value">$10.00</span></td>
+              </tr>
+            </table>
+            <a href="checkout.html" class="btn flex btn--md">
+              <i class="fi fi-rs-box-alt"></i> Proceed To Checkout
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="../../images/logo.png" alt="" />
+        <h4>Contact</h4>
+        <p>
+          <strong>Address:</strong>562 Wellington Road /Street 32, San Francisco
+        </p>
+        <p><strong>Phone:</strong>+01 2222 365 /(+91)01 2345 6789</p>
+        <p><strong>Hours:</strong>10:00 - 18:00, Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-pinterest"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms&Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>FRom App Store or Google Play</p>
+        <div class="row">
+          <img src="../../images/app.jpg" alt="" />
+          <img src="../../images/play.jpg" alt="" />
+        </div>
+        <p>Secured Payment Gat</p>
+        <img src="../../images/pay.png" />
+      </div>
+      <div class="copyright">
+        &copy; 2022, Tech etc - HTML CSS Ecommerse Template
+      </div>
+    </footer>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="cart.js"></script>
+  </body>
+</html>

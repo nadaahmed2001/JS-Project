@@ -2,7 +2,7 @@
 var xhr = new XMLHttpRequest();
 
 
-xhr.open('GET', 'db.json', true);
+xhr.open('GET', './database/allProducts.json', true);
 
 
 
@@ -15,6 +15,8 @@ xhr.onload = function () {
 
     var proContainer = document.querySelector('.pro-container');
     data.forEach(function (product) {
+      if(product.isFeatured == 'true'){
+
       var productHTML = `
                 <div class="pro">
                     <img src="${product.image}" alt="Product Image"
@@ -35,9 +37,10 @@ xhr.onload = function () {
                     <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
                 </div>
             `;
-
+      
       // Append the new product HTML to the container
       proContainer.innerHTML += productHTML;
+      }
     });
 
   }
@@ -60,7 +63,7 @@ xhr.send();
 var xhr2 = new XMLHttpRequest();
 
 
-xhr2.open('GET', 'db2.json', true);
+xhr2.open('GET', './database/allProducts.json', true);
 
 
 
@@ -73,6 +76,7 @@ xhr2.onload = function () {
 
     var proContainer2 = document.querySelector('.pro-container2');
     data2.forEach(function (product) {
+      if(product.isFeatured == 'false'){
       var productHTML = `
                 <div class="pro">
                     <img src="${product.image}" alt="Product Image"
@@ -96,6 +100,7 @@ xhr2.onload = function () {
 
       // Append the new product HTML to the container
       proContainer2.innerHTML += productHTML;
+      }
     });
 
   }
@@ -130,4 +135,4 @@ if (closes) {
     nav.classList.remove('active');  // Hide the menu
   });
 }
-//signin-validation
+

@@ -1,6 +1,6 @@
-// Fetch products
+// Fetch products using XMLHttpRequest
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "allProducts.json", true);
+xhr.open("GET", "../database/allProducts.json", true);
 
 xhr.onload = function () {
   if (xhr.status === 200) {
@@ -29,7 +29,14 @@ xhr.onload = function () {
                             </div>
                             <h4>$${product.price}</h4>
                         </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                        <a href="#">
+                          <i class="fa-solid fa-cart-shopping cart" 
+                             data-id="${product.id}"
+                             data-name="${product.name}"
+                             data-price="${product.price}"
+                             data-image="${product.image}">
+                          </i>
+                        </a>
                     </div>
                 `;
         proContainer.innerHTML += productHTML;
@@ -54,7 +61,14 @@ xhr.onload = function () {
                             </div>
                             <h4>$${product.price}</h4>
                         </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                        <a href="#">
+                          <i class="fa-solid fa-cart-shopping cart" 
+                             data-id="${product.id}"
+                             data-name="${product.name}"
+                             data-price="${product.price}"
+                             data-image="${product.image}">
+                          </i>
+                        </a>
                     </div>
                 `;
         proContainer.innerHTML += productHTML;
@@ -66,7 +80,7 @@ xhr.onload = function () {
 };
 
 xhr.onerror = function (error) {
-  console.error(error);
+  console.error("Error:", error);
 };
 
 xhr.send();
