@@ -1,6 +1,6 @@
 // Fetch products using XMLHttpRequest
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "allProducts.json", true);
+xhr.open("GET", "../database/allProducts.json", true);
 
 xhr.onload = function () {
   if (xhr.status === 200) {
