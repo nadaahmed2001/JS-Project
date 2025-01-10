@@ -116,3 +116,22 @@ xhr.onerror = function (error) {
 };
 
 xhr.send();
+//
+
+const bar = document.querySelector('#bar');
+const closes = document.querySelector('#close');  // Ensure you're using `closes`
+const nav = document.querySelector('#navbar');
+
+if (bar) {
+  bar.addEventListener('click', () => {
+    console.log("Hamburger menu clicked");
+    nav.classList.add('active');  // Show the menu
+  });
+}
+
+if (closes) {
+  closes.addEventListener('click', () => {
+    console.log("Close menu clicked");
+    nav.classList.remove('active');  // Hide the menu
+  });
+}
