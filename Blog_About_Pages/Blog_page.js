@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="col-12">
             <div class="blog-section-box">
                 <div class="blog-section-img">
-                    <img src="images/Blog_About/b1.jpg" alt="The Cotton-Jerrey Zip-Up Hoodie" class="img-fluid">
+                    <img src="/images/Blog_About/b1.jpg" alt="The Cotton-Jerrey Zip-Up Hoodie" class="img-fluid">
                 </div>
                 <div class="blog-section-detailes">
                     <h4>The Cotton-Jerrey Zip-Up Hoodie</h4>
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="col-12">
             <div class="blog-section-box">
                 <div class="blog-section-img">
-                    <img src="images/Blog_About/b2.jpg" alt="How to Style a Quiff">
+                    <img src="/images/Blog_About/b2.jpg" alt="How to Style a Quiff">
                 </div>
                 <div class="blog-section-detailes">
                     <h4>How to Style a Quiff</h4>
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="col-12">
             <div class="blog-section-box">
                 <div class="blog-section-img">
-                    <img src="images/Blog_About/b3.jpg" alt="Must Have Skeater Girl Item">
+                    <img src="/images/Blog_About/b3.jpg" alt="Must Have Skeater Girl Item">
                 </div>
                 <div class="blog-section-detailes">
                     <h4>Must Have Skeater Girl Item</h4>
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="col-12">
             <div class="blog-section-box">
                 <div class="blog-section-img col-sm-12">
-                    <img src="images/Blog_About/b4.jpg" alt="Runaway Inspired Trends">
+                    <img src="/images/Blog_About/b4.jpg" alt="Runaway Inspired Trends">
                 </div>
                 <div class="blog-section-detailes">
                     <h4>Runaway Inspired Trends</h4>
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="col-12">
             <div class="blog-section-box">
                 <div class="blog-section-img">
-                    <img src="images/Blog_About/b6.jpg" alt="AW20 Menswear Trends">
+                    <img src="/images/Blog_About/b6.jpg" alt="AW20 Menswear Trends">
                 </div>
                 <div class="blog-section-detailes">
                     <h4>AW20 Menswear Trends</h4>
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="col-12">
     <div class="blog-section-box">
         <div class="blog-section-img">
-            <img src="images/Blog_About/b4.jpg" alt="The Cotton-Jerrey Zip-Up Hoodie" class="img-fluid">
+            <img src="/images/Blog_About/b4.jpg" alt="The Cotton-Jerrey Zip-Up Hoodie" class="img-fluid">
         </div>
         <div class="blog-section-detailes">
             <h4>The Cotton-Jerrey Zip-Up Hoodie</h4>
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="col-12">
     <div class="blog-section-box">
         <div class="blog-section-img">
-            <img src="images/Blog_About/b1.jpg" alt="How to Style a Quiff">
+            <img src="/images/Blog_About/b1.jpg" alt="How to Style a Quiff">
         </div>
         <div class="blog-section-detailes">
             <h4>How to Style a Quiff</h4>
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="col-12">
     <div class="blog-section-box">
         <div class="blog-section-img">
-            <img src="images/Blog_About/b3.jpg" alt="Must Have Skeater Girl Item">
+            <img src="/images/Blog_About/b3.jpg" alt="Must Have Skeater Girl Item">
         </div>
         <div class="blog-section-detailes">
             <h4>Must Have Skeater Girl Item</h4>
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="col-12">
     <div class="blog-section-box">
         <div class="blog-section-img col-sm-12">
-            <img src="images/Blog_About/b5.jpg" alt="Runaway Inspired Trends">
+            <img src="/images/Blog_About/b5.jpg" alt="Runaway Inspired Trends">
         </div>
         <div class="blog-section-detailes">
             <h4>Runaway Inspired Trends</h4>
@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <div class="col-12">
     <div class="blog-section-box">
         <div class="blog-section-img">
-            <img src="images/Blog_About/b1.jpg" alt="AW20 Menswear Trends">
+            <img src="/images/Blog_About/b1.jpg" alt="AW20 Menswear Trends">
         </div>
         <div class="blog-section-detailes">
             <h4>AW20 Menswear Trends</h4>
