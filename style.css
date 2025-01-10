@@ -682,6 +682,15 @@ footer .copyright{
 {
     padding: 150px 150px 0 150px;
 }
+
+.blog-section-box {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
+
 #blog-section .blog-section-box{
 /* # to put el klam kolo h ,p in one row */
     display:flex;
@@ -710,6 +719,7 @@ footer .copyright{
 #blog-section .blog-section-img{
 
     width: 50%;
+    flex: 0 0 auto; 
     margin-right: 40px;
 
 }
@@ -720,6 +730,11 @@ footer .copyright{
     /* 3l4an el img matb2a4 bahta kda  */
     object-fit: cover;
 
+}
+
+
+.blog-section-detailes {
+    flex: 1; 
 }
 
 #blog-section .blog-section-detailes{
@@ -757,6 +772,20 @@ transition: 0.4s;
 
 
 
+#swipe_arrow{
+    text-align: center;
+    
+   }
+#swipe_arrow button{
+       text-decoration: none;
+       background-color: #088178;
+       padding: 15px 20px ;
+       border-radius: 4px;
+       color: #fff;
+       font-weight: 600;
+       cursor: pointer;
+       border: none;
+}
 /* About*/
 
 
@@ -805,6 +834,60 @@ height: auto;
  border-radius: 20px;
 
 }
+#testimonials {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+  }
+  
+  #testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .testimonial-box {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-box img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 15%;
+    border: 3px solid #ddd;
+  }
+  
+  .testimonial-box p {
+    font-style: italic;
+    color: #555;
+    margin: 15px 0;
+  }
+  
+  .testimonial-box h4 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .testimonial-box span {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .testimonial-box .stars {
+    margin: 10px 0;
+    color: #ffc107;
+    font-size: 1.2rem;
+  }
+    
 
 
 
@@ -968,39 +1051,39 @@ height: auto;
 
 
     /* Blog page */
-    #blog {
+    #blog-section {
         padding: 100px 20px 0 20px;
-        }
-        #blog .blog-box {
+    }
+    #blog-section .blog-section-box {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        }
-        #blog .blog-img {
+    }
+    #blog-section .blog-section-img {
         width: 100%;
         margin-right: 0px;
         margin-bottom: 30px;
-        }
-        #blog .blog-details {
+    }
+    #blog-section .blog-section-detailes{
         width: 100%;
-        }
+    }
         /*About*/
         /* About Page */
-        #about-head {
+    #about-head {
          flex-direction: column;
-        }
-        #about-head img {
+    }
+    #about-head img {
          width: 100%;
          margin-bottom: 20px;
-        }
-        #about-head div {
+    }
+    #about-head div {
          padding-left: 0px;
-        } 
-        #about-app .video{
+    } 
+    #about-app .video{
             width:100%;
             height:100%;
             margin: 30px auto 0 auto ;
-        }
+    }
         
 
 
