@@ -136,3 +136,16 @@ if (closes) {
   });
 }
 
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const totalCount = cart.reduce((count, item) => count + item.quantity, 0); // Sum of all product quantities
+  const cartCountElements = document.querySelectorAll('.cart__count'); // Select all elements with the class
+
+  cartCountElements.forEach((element) => {
+    element.textContent = totalCount; // Update the count in each element
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  updateCartCount();
+});
