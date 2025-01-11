@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .closest("tr")
         .querySelector(".table__trash")
         .getAttribute("data-id");
-      const product = cart.find((item) => item.id === productId);
+      const product = cart.find((item) => item.id == productId);
       if (product) {
         product.quantity = updatedQuantity;
         localStorage.setItem("cart", JSON.stringify(cart));
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const row = e.target.closest("tr");
       row.remove();
       function removeFromLocalStorage(productId) {
-        const updatedCart = cart.filter((item) => item.id !== productId);
+        const updatedCart = cart.filter((item) => item.id != productId);
         cart = updatedCart;
         localStorage.setItem("cart", JSON.stringify(updatedCart));
       }

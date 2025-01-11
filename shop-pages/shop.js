@@ -30,7 +30,14 @@ xhr.onload = function () {
                             </div>
                             <h4>$${product.price}</h4>
                         </div>
-                        <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                        <a href="#">
+                          <i class="fa-solid fa-cart-shopping cart" 
+                             data-id="${product.id}"
+                             data-name="${product.name}"
+                             data-price="${product.price}"
+                             data-image="${product.image}">
+                          </i>
+                        </a>
                     </div>
                 `;
         proContainer.innerHTML += productHTML;

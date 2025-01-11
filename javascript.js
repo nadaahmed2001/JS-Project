@@ -162,13 +162,10 @@ function updateCartCount() {
 
 }
 
-/* event on when click on cart icon */
-// Use Event Delegation for the Cart Click Event
+/* event on when click on cart icon // or cart button */
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('cart')) {
-    //e.preventDefault(); // Prevent default behavior
     updateCartCount();
-    
   }
 });
 

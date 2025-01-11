@@ -18,18 +18,26 @@ if (productId) {
         document.querySelector("#prodDetails").innerHTML = `
       <div class="single-prod-image">
         <img src="${product.image}" width="100%" id="MainImage" alt="" />
-
       </div>
       <div class="single-prod-details">
         <h6>${product.name}</h6>
         <h2>$${product.price}</h2>
-
-        <input type="number" value="1" />
-        <button class="normal">Add To Cart</button>
+        <input type="number" id="productQuantity"  value="1" min="1" />
+        <button class="normal btnAddToCart cart">Add To Cart</button>
         <h2>Product Details</h2>
         <span>${product.description}</span>
       </div>
         `;
+
+        // Add event listener for the Add To Cart button
+        document.querySelector(".btnAddToCart").addEventListener("click", function () {
+          const quantityInput = document.querySelector("#productQuantity");
+          const quantity = parseInt(quantityInput.value);
+
+          if (quantity > 0) {
+            addToCart(product, quantity);
+          } 
+        });
       } else {
         console.error("Product not found");
         document.querySelector("#prodDetails").innerHTML = `<p>Product not found</p>`;
@@ -47,4 +55,18 @@ if (productId) {
 } else {
   console.error("No product ID specified in the URL");
   document.querySelector("#prodDetails").innerHTML = `<p>No product selected</p>`;
+}
+
+function addToCart(product, quantity) {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  //if product already exists just increment it
+  const existingProduct = cart.find(item => item.id == product.id);
+  if (existingProduct) {
+    existingProduct.quantity += quantity; 
+  } else {
+    cart.push({ ...product, quantity }); 
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart)); 
 }
