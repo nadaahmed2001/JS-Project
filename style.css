@@ -105,7 +105,7 @@ left: 0;
 }
 #navbar li a:hover,
 #navbar li a.active{
-    color:#088178
+    color:#088178;
 }
 
 #navbar li a.active::after,
@@ -885,7 +885,12 @@ height: auto;
     color: #ffc107;
     font-size: 1.2rem;
   }
-    
+  #cart-style{
+    font-size: 17px;
+    font-weight: 410;
+    color: white;
+    padding: 5px;
+  } 
 
   
 

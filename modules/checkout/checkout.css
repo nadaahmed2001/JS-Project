@@ -1,0 +1,161 @@
+body{
+    background-color: #E3E6F3;  
+  
+}
+.container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#myForm {
+    width: 50%;
+   margin: 30px;
+   background-color: #fff;
+   padding: 30px 40px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+   border-radius: 8px; 
+   font-family: 'Arial', sans-serif;
+   color: #333;
+   box-sizing: border-box;
+}
+#myForm h4{
+    margin-left: 7px;
+    color: #333;
+    font-weight: 700;
+}
+#myForm .form-label {
+   font-size: 14px;
+   font-weight: bold;
+   color: #555;
+}
+
+#myForm .form-control,
+#myForm .form-select {
+   width: 100%;
+   padding: 12px;
+   margin-top: 8px;
+   margin-bottom: 12px;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   font-size: 16px;
+   transition: all 0.3s ease-in-out;
+}
+
+#myForm .form-control:focus,
+#myForm .form-select:focus {
+   outline: none;
+   border-color: #007bff;
+   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+#myForm .form-check-label {
+   font-size: 14px;
+   color: #868585;
+}
+
+#myForm .form-check-input {
+   margin-top: 5px;
+}
+/* // */
+.cart__total{
+width: 50%;
+background-color: #fff;
+padding: 30px 40px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+border-radius: 8px; 
+font-family: 'Arial', sans-serif;
+color: #333;
+box-sizing: border-box;
+margin: 30px;
+} 
+  .cart__total-table tr td {
+    border: 1px solid  #555;;
+    padding: 20px;
+    width: 50%;
+  }
+  
+  .cart__total-title {
+    font-size: 12px;
+  }
+  
+  .cart__total-price {
+    color:  #555;;
+    font-weight: 700;
+  }
+  
+  .cart__total button {
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: white;
+    background-color: #088178;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition:  0.2s;
+  }
+   
+  .Payment-method {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    margin: 0 auto;
+}
+h5 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.payment-option input {
+    margin-right: 10px;
+}
+
+.payment-option label {
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.payment-option label:hover {
+    color: #3498db;
+}
+
+.payment-option input:checked + label {
+    color: #3498db; 
+}
+
+.payment-option:last-child {
+    margin-bottom: 0;
+}
+
+.payment-option input[type="radio"]:checked {
+    background-color: #3498db;
+    border-color: #3498db;
+}
+
+.payment-methods-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+   #myForm {
+       padding: 20px;
+       max-width: 90%;
+   }
+
+   #myForm button {
+       font-size: 14px;
+   }
+}
