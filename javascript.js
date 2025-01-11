@@ -34,7 +34,13 @@ xhr.onload = function () {
                         </div>
                         <h4>$${product.price}</h4> <!-- Dynamically inserting the price -->
                     </div>
-                    <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                    <a>                
+                    <i class="fa-solid fa-cart-shopping cart" 
+                   data-id="${product.id}"
+                   data-name="${product.name}"
+                   data-price="${product.price}"
+                   data-image="${product.image}">
+                </i></a>
                 </div>
             `;
       
@@ -94,7 +100,15 @@ xhr2.onload = function () {
                         </div>
                         <h4>$${product.price}</h4> <!-- Dynamically inserting the price -->
                     </div>
-                    <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+                    <a href="#">
+                    
+                    <a>                
+                    <i class="fa-solid fa-cart-shopping cart" 
+                   data-id="${product.id}"
+                   data-name="${product.name}"
+                   data-price="${product.price}"
+                   data-image="${product.image}">
+                </i></a>
                 </div>
             `;
 
@@ -144,8 +158,23 @@ function updateCartCount() {
   cartCountElements.forEach((element) => {
     element.textContent = totalCount; // Update the count in each element
   });
+
+
 }
 
+/* event on when click on cart icon */
+// Use Event Delegation for the Cart Click Event
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('cart')) {
+    //e.preventDefault(); // Prevent default behavior
+    updateCartCount();
+    
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
-  updateCartCount();
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalCount = cart.reduce((count, item) => count + item.quantity, 0); // Sum of all product quantities
+    const cartCountElement = document.querySelector('.cart__count'); // Select the element with the class
+    cartCountElement.textContent = totalCount;
 });

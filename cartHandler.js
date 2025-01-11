@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.addEventListener("click", (e) => {
       if (e.target.classList.contains("cart")) {
         e.preventDefault(); // Prevent default anchor behavior
-  
+        updateCartCount();
         // Get the product details from the clicked cart icon
         const productId = e.target.getAttribute("data-id");
         const productName = e.target.getAttribute("data-name");
@@ -22,9 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
           };
   
           addToCart(product);
-        } else {
-          console.error("Product data is missing");
-        }
+        } 
       }
     });
   });
@@ -44,4 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
   
     localStorage.setItem("cart", JSON.stringify(cart));
     //alert("Product added to cart!");
+  }
+
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalCount = cart.reduce((count, item) => count + item.quantity, 0); // Sum of all product quantities
+    const cartCountElements = document.querySelectorAll('.cart__count'); // Select all elements with the class
+  
+    cartCountElements.forEach((element) => {
+      element.textContent = totalCount; // Update the count in each element
+    });
   }

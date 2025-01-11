@@ -113,6 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         renderCartItems();
       }
     }
+    updateCartCount();
   });
 
   cartTableBody.addEventListener("click", (e) => {
@@ -127,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       removeFromLocalStorage(productId);
       updateCartTotals();
+      updateCartCount();
     }
   });
 });
