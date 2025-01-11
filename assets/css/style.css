@@ -110,13 +110,10 @@ left: 0;
 #navbar li a.active::after,
 #navbar li a:hover::after
 {
-    content: "";
     width: 30px;
     height: 2px;
     background-color: #088178 ;
     position: absolute;
-    bottom: -4px;
-    left: 20px;
 }
 #mobile{
     display: none;
@@ -658,6 +655,7 @@ footer .copyright{
         box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
         padding: 80px 0 0 10px;
         transition: 0.3s;
+       
     }
 
     #navbar.active {
@@ -794,3 +792,47 @@ footer .copyright{
         width: 100%;
     }
 }
+
+/*counter circle for cart */
+.header__action-btn span.count {
+    position: absolute;
+    top: -0.625rem;
+    right: -0.625rem;
+    background-color: var(--first-color);
+    color: var(--body-color);
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    font-size: var(--tiny-font-size);
+    line-height: 18px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+
+.header__action-btn {
+    position: relative;
+}
+  
+.header__action-btn img {
+    width: 24px;
+}
+  
+  .header__action-btn span.count {
+    position: absolute;
+    top: -0.625rem;
+    right: -0.625rem;
+    background-color: var(--first-color);
+    color: var(--body-color);
+    height: 18px;
+    width: 18px;
+    text-align: center;
+    font-size: var(--tiny-font-size);
+    line-height: 18px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/*******************/

@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
       cart.push(product); // Add new product if it doesn't exist in the cart
     }
   
-    // Save the updated cart back to localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
-    alert("Product added to cart!");
+    //alert("Product added to cart!");
   }

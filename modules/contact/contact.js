@@ -32,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             showSuccessAlert();
         } catch (error) {
             console.error(error);
-            alert('Form submission failed');
         }
     });
 

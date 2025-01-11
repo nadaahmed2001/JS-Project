@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--=============== FLATICON ===============-->
     <link
-      rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"/>
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
 
     <!--=============== SWIPER CSS ===============-->
     <link
@@ -22,20 +24,23 @@
   </head>
   <body>
     <section id="header">
-      <a href="#"><img src="../../images/logo.png" class="logo" alt="Logo" /></a>
+      <a href="#"
+        ><img src="../../images/logo.png" class="logo" alt="Logo"
+      /></a>
       <div>
         <ul id="navbar">
           <li><a href="../../index.html">Home</a></li>
           <li><a href="../../shop-pages/shop.html">Shop</a></li>
-          <li><a href="../blog.html">Blog</a></li>
-          <li><a href="../about.html">About</a></li>
+          <li><a href="../../Blog_About_Pages/Blog_page.html">Blog</a></li>
+          <li><a href="../../Blog_About_Pages/About_page.html">About</a></li>
           <li><a href="/modules/contact/contact.html">Contact</a></li>
-          <li class="bag">
-            <a class="active" href="/modules/cart/cart.html"
-              ><i class="fa-solid fa-bag-shopping"></i
-            ></a>
+          <li >
+            <a href="/modules/cart/cart.html" class="header__action-btn" title="Cart">
+              <img src="../../assets/images/icon-cart.svg" alt="" />
+              <span class="cart__count">3</span>
+            </a>
           </li>
-          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        
         </ul>
       </div>
       <div id="mobile">
@@ -62,39 +67,12 @@
                 <th>Rename</th>
               </tr>
             </thead>
-            <tbody>
-              <!-- <tr>
-                <td>
-                  <img
-                    src="./assets//img/product-2-1.jpg"
-                    alt=""
-                    class="table__img"
-                  />
-                </td>
-                <td>
-                  <h3 class="table__title">
-                    Amazon Brand - Daily Ritual Women's Jersey
-                  </h3>
-                  <p class="table__description">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                </td>
-                <td>
-                  <span class="table__price">$110</span>
-                </td>
-                <td><input type="number" value="3" class="quantity" /></td>
-                <td><span class="subtotal">$220</span></td>
-                <td><i class="fi fi-rs-trash table__trash"></i></td>
-              </tr> -->
-            </tbody>
+            <tbody></tbody>
           </table>
         </div>
 
         <div class="cart__actions">
-          <a href="#" class="btn flex btn__md">
-            <i class="fi-rs-shuffle"></i> Update Cart
-          </a>
-          <a href="#" class="btn flex btn__md">
+          <a href="../../shop-pages/shop.html" class="btn flex btn__md">
             <i class="fi-rs-shopping-bag"></i> Continue Shopping
           </a>
         </div>
@@ -120,6 +98,13 @@
                     </button>
                   </div>
                 </div>
+                <div
+                  class="alert alert-success cart-coupon-alert"
+                  style="display: none"
+                  role="alert"
+                >
+                
+                </div>
               </form>
             </div>
           </div>
@@ -128,16 +113,36 @@
             <h3 class="section__title">Cart Totals</h3>
             <table class="cart__total-table">
               <tr>
-                <td><span class="cart__total-title cart_subtotal">Cart Subtotal</span></td>
-                <td><span class="cart__total-price cart__subtotal-value">$0.00</span></td>
+                <td>
+                  <span class="cart__total-title cart_subtotal"
+                    >Cart Subtotal</span
+                  >
+                </td>
+                <td>
+                  <span class="cart__total-price cart__subtotal-value"
+                    >$0.00</span
+                  >
+                </td>
               </tr>
               <tr>
-                <td><span class="cart__total-title shipping_cart">Shipping</span></td>
-                <td><span class="cart__total-price cart__shipping-value">$10.00</span></td>
+                <td>
+                  <span class="cart__total-title shipping_cart">Shipping</span>
+                </td>
+                <td>
+                  <span class="cart__total-price cart__shipping-value"
+                    >$20.00</span
+                  >
+                </td>
               </tr>
               <tr>
-                <td><span class="cart__total-title grand_total">Total</span></td>
-                <td><span class="cart__total-price cart__total-value">$10.00</span></td>
+                <td>
+                  <span class="cart__total-title grand_total">Total</span>
+                </td>
+                <td>
+                  <span class="cart__total-price cart__total-value"
+                    >$20.00</span
+                  >
+                </td>
               </tr>
             </table>
             <a href="checkout.html" class="btn flex btn--md">
@@ -193,9 +198,7 @@
         <p>Secured Payment Gat</p>
         <img src="../../images/pay.png" />
       </div>
-      <div class="copyright">
-        &copy; 2022, Tech etc - HTML CSS Ecommerse Template
-      </div>
+      <div class="copyright">&copy; 2024, Tech etc - Ecommerce</div>
     </footer>
 
     <!--=============== SWIPER JS ===============-->
