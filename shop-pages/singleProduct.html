@@ -12,9 +12,8 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="../style.css" />
-
-    <link rel="stylesheet" href="../icons/all.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/icons/all.css" />
   </head>
   <body>
     <!-- navbarPart -->
@@ -27,14 +26,20 @@
           <li><a href="../blog.html">Blog</a></li>
           <li><a href="../about.html">About</a></li>
           <li><a href="../contact.html">Contact</a></li>
-          <li class="bag">
-            <a href="../modules/cart/cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+          <li >
+            <a href="../modules/cart/cart.html" class="header__action-btn" title="Cart">
+              <img src="../../assets/images/icon-cart.svg" alt="" />
+              <span class="cart__count"></span>
+            </a>
           </li>
           <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
         </ul>
       </div>
       <div id="mobile">
-        <a href="../cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <a href="../modules/cart/cart.html" class="header__action-btn" title="Cart">
+          <img src="../../assets/images/icon-cart.svg" alt="" />
+          <span class="cart__count"></span>
+        </a>
         <i id="bar" class="fa-solid fa-outdent"></i>
       </div>
     </section>
@@ -117,5 +122,7 @@
 
     <script src="shop.js" type="module"></script>
     <script src="product-details.js" type="module"></script>
+    <script src="../cartHandler.js"></script>
+    <script src="../javascript.js"></script>
   </body>
 </html>
