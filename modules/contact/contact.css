@@ -74,7 +74,23 @@
   margin-left: 0px;
   line-height: 25px;
 }
-
+.workik-contact-box{
+  font-size: 35px;
+  color: #088178;
+}
+.workik-contact-box  i{
+  margin-right: 20px;
+}
+.contactus-head{
+  color: #088178 ;
+}
+.social-media-links .icons{
+  font-size: 25px;
+  color: #088178;
+}
+.social-media-links .icons i{
+padding: 10px;
+}
 .contact_us_green .responsive-cell-block {
   min-height: 75px;
 }

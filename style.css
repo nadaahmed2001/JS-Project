@@ -71,6 +71,7 @@ button.normal {
         outline: none;
         transition:  0.2s;
         }
+       
 /* NavBar */
 #header{
 display: flex;
@@ -886,7 +887,7 @@ height: auto;
   }
     
 
-
+  
 
 
 

@@ -406,7 +406,12 @@ table {
   display: inline-flex;
   /* width: fit-content; */
 }
-
+#cart-style{
+  font-size: 17px;
+  font-weight: 410;
+  color: white;
+  padding: 5px;
+}
 
 /* For medium devices */
 @media screen and (max-width: 992px) {
