@@ -256,6 +256,7 @@ document.addEventListener("DOMContentLoaded", () => {
      // update content based on page range
      const updateBlogSection = (startIndex, endIndex) => {
          blogSection.innerHTML = sections.slice(startIndex, endIndex).join('');
+         blogSection.scrollIntoView({ behavior: "smooth", block: "start" });
      };
      
     const handlePagination = (page) => {
@@ -299,9 +300,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-
-
-
-
-  
