@@ -1,7 +1,25 @@
-//
+export function loadConfig() {
+  return fetch('../../config.json')
+      .then(response => {
+          if (!response.ok) {
+              throw new Error(`Failed to fetch config.json: ${response.status}`);
+          }
+          return response.json();
+      })
+      .then(config => {
+          return config;
+      })
+      .catch(error => {
+          console.error("Error loading JSON:", error);
+          return null;
+      });
+}
 const bar = document.querySelector('#bar');
-const closes = document.querySelector('#close');  // Ensure you're using `closes`
+const closes = document.querySelector('#close'); 
 const nav = document.querySelector('#navbar');
+
+
+
 
 if (bar) {
   bar.addEventListener('click', () => {

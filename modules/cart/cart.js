@@ -1,3 +1,5 @@
+import { loadConfig } from "../../javascript.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   const couponInput = document.querySelector(".coupon__form .form__input");
@@ -5,7 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartSubtotalElem = document.querySelector(".cart__subtotal-value");
   const totalElem = document.querySelector(".cart__total-value");
   const cartTableBody = document.querySelector(".table tbody");
-  const shipping = 20;
+  let shipping = 0;
+
+
+  loadConfig().then(config => {
+          shipping = config ? config.shippingValue : 0;})
+
   let coupons = [];
   const fetchCoupons = (() => {
     fetch("../../database/coupon.json")
@@ -79,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       subtotal -= discount;
-      const shipping = 10;
+
       const total = subtotal + shipping;
 
       cartSubtotalElem.textContent = `$${subtotal.toFixed(2)}`;
@@ -132,14 +139,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-
-// Retrieve the cart data from localStorage
-let cart = JSON.parse(localStorage.getItem("cart"));
-
-// Check if the cart exists
-if (cart) {
-  console.log(cart); // Access the cart items
-} else {
-  console.log("No cart data found in localStorage");
-}

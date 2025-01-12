@@ -1,6 +1,9 @@
+import { loadConfig } from "../../javascript.js";
+
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.querySelector('#contact-form');
     const successAlert = document.querySelector('.contact-success-alert');
+    let contactUsGateway = "";  // Initialize the variable
 
     // Form validation logic
     const validators = {
@@ -19,8 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isValid) return;
 
         try {
+            // Wait for the config to be loaded before assigning
+            const config = await loadConfig();
+            contactUsGateway = config ? config.contactUsGateway : "";
+            console.log(contactUsGateway);  // Now this will have the correct value
+
             const formData = new FormData(form);
-            const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+            const response = await fetch(contactUsGateway, {
                 method: 'POST',
                 body: formData,
                 headers: { Accept: 'application/json' },
