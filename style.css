@@ -128,7 +128,7 @@ left: 0;
 
 /*hero*/
 #hero{
-    background-image: url(./images/hero4.jpeg);
+    /* background-image: url(/assets/images/); */
     height: 90vh;
     width: 100%;
     background-size: cover;

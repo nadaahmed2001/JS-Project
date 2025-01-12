@@ -127,7 +127,9 @@ left: 0;
 
 /*hero*/
 #hero{
-    background-image: url(/assets/images/hero4.jpg);
+    /* background-image: url(/assets/images/hero4.jpg); */
+    background-image: url(../images/bbc83bd28a8e3f8fa659cf9805568a62.jpg);
+    background-position: c;
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -140,9 +142,16 @@ left: 0;
 }
 #hero h4{
     padding-bottom: 15px;
+    color:#e3e6f3 
 }
 #hero h1{
     color:#e3e6f3    
+}
+#hero h2{
+    color:#e3e6f3    
+}
+#hero p{
+    color:#e3e6f3 
 }
 #hero button{
     background-image: url(/assets/images/button.png);
