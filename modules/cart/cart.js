@@ -132,3 +132,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+// Retrieve the cart data from localStorage
+let cart = JSON.parse(localStorage.getItem("cart"));
+
+// Check if the cart exists
+if (cart) {
+  console.log(cart); // Access the cart items
+} else {
+  console.log("No cart data found in localStorage");
+}

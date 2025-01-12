@@ -2,6 +2,15 @@ body{
     background-color: #E3E6F3;  
   
 }
+.cart__count{
+  
+    font-size: 17px;
+    font-weight: 410;
+    color: white;
+    padding: 5px;
+    
+   
+}
 .container{
     display: flex;
     justify-content: space-evenly;
