@@ -557,7 +557,7 @@ font-weight: 100;
 /* blog */
 #page_header.blog-header
 {
-    background-image: url(/images/Blog_About/back19.jpg);
+    background-image: url(../assets/images/Blog_About/back19.jpg);
     background-size: cover;
     width:100%;
     height:250px;

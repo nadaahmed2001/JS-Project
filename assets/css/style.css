@@ -76,7 +76,7 @@ button.normal {
 display: flex;
 align-items: center;
 justify-content: space-between;
-padding: 20px 80px;
+padding: 7px 10px; 
 background: #E3E6F3;
 box-shadow: 0 5px 15px rgba(0,0,0,0.06);
 z-index: 999;
@@ -127,7 +127,7 @@ left: 0;
 
 /*hero*/
 #hero{
-    background-image: url(/assets/images/hero4.png);
+    background-image: url(/assets/images/hero4.jpg);
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -142,12 +142,12 @@ left: 0;
     padding-bottom: 15px;
 }
 #hero h1{
-    color:#088178    
+    color:#e3e6f3    
 }
 #hero button{
     background-image: url(/assets/images/button.png);
     background-color: transparent;
-    color:#088178 ;
+    /* color:#088178 ; */
     border: 0;
     padding: 14px 80px 14px 65px;
     cursor: pointer;
@@ -354,25 +354,26 @@ left: 0;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        background-image: url("/assets/images/b17.jpg");
+        background-image: url("/assets/images/b17.jpeg");
         min-width: 750px;
         height: 50vh;
         background-size: cover;
         background-position: center;
         padding: 30px;
+        
 } 
 #sm-banner h4{
-    color: #fff;
+    color: rgb(7, 1, 1);
     font-size: 20px;
     font-weight: 300;
 }
 #sm-banner h2{
-    color: #fff;
+    color: rgb(7, 1, 1);;
     font-size: 28px;
     font-weight: 800;
 }
 #sm-banner span{
-    color: #fff;
+    color: rgb(7, 1, 1);;
     font-size: 14px;
     font-weight: 500;
     padding-bottom: 15px;
@@ -390,7 +391,7 @@ left: 0;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background-image: url("/assets/images/b7.jpg");
+    background-image: url("/assets/images/b7.jpeg");
     min-width: 28%;
     height: 30vh;
     background-size: cover;
@@ -460,7 +461,7 @@ left: 0;
     border-bottom-left-radius: 0;
 }
 #newsletter button{
-    background-color: #088178;
+    background-color: #ffbd27;
     color: #fff;
     white-space:nowrap;
     border-top-right-radius: 0;
@@ -814,3 +815,359 @@ li a.header__action-btn img {
     width: 24px;
 }
 /*******************/
+
+/* Blog */
+#page_header.blog-header
+{
+    background-image: url(../assets/images/Blog_About/back19.jpg);
+    background-size: cover;
+    width:100%;
+    height:250px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* #de ely zabteto 5aleto f el nos  w fe benhom space*/
+    flex-direction: column;
+    padding: 14px;
+
+}
+
+
+#page_header h2{
+    color: white;
+}
+
+#page_header .blog-header h2
+{
+    font-size: 46px;
+    /* line-height: 54px; */
+    color: white;
+}
+.about-header p{
+    color: white;
+}
+#page_header .blog-header p
+{
+    font-size: 20px;
+    color: white;
+    margin:15px 0 20px 0  ;
+}
+
+
+#blog-section
+{
+    padding: 150px 150px 0 150px;
+}
+
+.blog-section-box {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start; 
+    gap: 20px; 
+}
+
+
+#blog-section .blog-section-box{
+/* # to put el klam kolo h ,p in one row */
+    display:flex;
+    align-items: center;
+    width: 100%;
+    /* mn 8erha el 13/01 m4 hatzhar aslan l2nha ta7t ma3mola absolute */
+    position: relative;
+
+    /* to make space between boxs */
+    padding-bottom: 90px;
+
+
+}
+
+#blog-section .blog-section-box h1{
+    position:absolute;
+    top:-40px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9cbce;
+    z-index: -3 ; /* 3l4an tb2a wara elsora */
+    
+    
+}
+#blog-section .blog-section-img{
+
+    width: 50%;
+    flex: 0 0 auto; 
+    margin-right: 40px;
+
+}
+
+#blog-section img{
+    width:100%;
+    height: 300px;
+    /* 3l4an el img matb2a4 bahta kda  */
+    object-fit: cover;
+
+}
+
+
+.blog-section-detailes {
+    flex: 1; 
+}
+
+#blog-section .blog-section-detailes{
+
+    width: 50%;
+
+}
+#blog-section .blog-section-detailes a 
+{
+text-decoration: none;
+font-size: 11px;
+color:#000;
+font-weight: 700;
+position: relative;
+/* 3l4an y8yar el lon btare2a abt2 4waya w ykon smooth  */
+transition: 0.4s;
+
+}
+
+#blog-section .blog-section-detailes  a::after{
+    content: "";
+    width: 50px;
+    height:1px;
+    background-color: #000;
+    position:absolute;
+    top:4px;
+    right: -60px;
+
+}
+
+#blog-section .blog-section-detailes a:hover 
+{
+    color :#088178;
+}
+
+
+
+#swipe_arrow{
+    text-align: center;
+    
+   }
+#swipe_arrow button{
+       text-decoration: none;
+       background-color: #088178;
+       padding: 15px 20px ;
+       border-radius: 4px;
+       color: #fff;
+       font-weight: 600;
+       cursor: pointer;
+       border: none;
+}
+/* About*/
+
+
+#page_header.about-header
+{
+    background-image: url(/images/Blog_About/banner.png);
+    background-size: cover;
+    width:100%;
+    height:250px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* #de ely zabteto 5aleto f el nos  w fe benhom space*/
+    flex-direction: column;
+    padding: 14px;
+
+}
+
+
+#about-head{
+ display:flex;
+ align-items: center;
+}
+#about-head img{
+width: 50%;
+height: auto;
+
+}
+#about-head div{
+    padding-left: 40px;
+
+}
+
+#about-app {
+    text-align: center;
+}    
+#about-app .video {
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+#about-app .video video
+{
+ width:70%;
+ height:100%;
+ border-radius: 20px;
+
+}
+#testimonials {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+  }
+  
+  #testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .testimonial-box {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-box img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 15%;
+    border: 3px solid #ddd;
+  }
+  
+  .testimonial-box p {
+    font-style: italic;
+    color: #555;
+    margin: 15px 0;
+  }
+  
+  .testimonial-box h4 {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .testimonial-box span {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .testimonial-box .stars {
+    margin: 10px 0;
+    color: #ffc107;
+    font-size: 1.2rem;
+  }
+    
+
+
+  @media (max-width: 477px) {
+    .section-p1{
+        padding: 20px;
+    }
+    #header{
+        padding: 10px 30px;
+    }
+    h1{
+        font-size: 38px;
+    }
+   h2{
+    font-size: 32px;
+   }
+    #hero{
+        padding: 0 20px;
+        background-position: 55%;
+    }
+    #feature{
+    justify-content: space-between;
+   }
+   #feature .fe-box{
+    width: 155px;
+    margin: 0 0 15px 0 ;
+   }
+   #product1 .pro{
+    width: 100%;
+   }
+   #banner{
+    height: 40vh;
+   }
+   #sm-banner .banner-box{
+    height: 40vh;
+   }
+   #sm-banner .banner-box2{
+    margin-top: 20px;
+    }
+    #banner3{
+        padding: 0 20px;
+    }
+    #banner3 .banner-box{
+        width: 100%;
+    }
+    #newsletter .form{
+       width: 100%;
+    }
+    #newsletter{
+        padding: 40px 20px;
+    }
+   footer .copyright{
+        text-align: start;
+    }
+
+    /* Single Product */
+    #prodDetails{
+        flex-direction: column;
+    }
+    #prodDetails .single-prod-image{
+        width: 100%;
+        margin-right: 0px;
+    }
+
+    #prodDetails .single-prod-details{
+        width: 100%;
+    }
+
+
+     /* Blog page */
+    #blog-section {
+        padding: 100px 20px 0 20px;
+    }
+    #blog-section .blog-section-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #blog-section .blog-section-img {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+    #blog-section .blog-section-detailes{
+        width: 100%;
+    }
+        /*About*/
+        /* About Page */
+    #about-head {
+         flex-direction: column;
+    }
+    #about-head img {
+         width: 100%;
+         margin-bottom: 20px;
+    }
+    #about-head div {
+         padding-left: 0px;
+    } 
+    #about-app .video{
+            width:100%;
+            height:100%;
+            margin: 30px auto 0 auto ;
+    }
+        
+
+
+
+}
