@@ -40,24 +40,28 @@
     <form id="myForm" class="row g-3">
         <h4>Billing Details</h4>
         <div class="col-md-12">
-          <label class="form-label"> Name</label>
-          <input type="text" class="form-control" name="name">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+          <div id="nameError" class="text-danger"></div>
         </div>
         <div class="col-md-12">
-          <label for="inputEmail4" class="form-label" id="email">Email</label>
-          <input type="email" class="form-control" id="inputEmail4">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+          <div id="emailError" class="text-danger"></div>
         </div>
         <div class="col-md-12">
-          <label for="inputphonenum" class="form-label">Phone Number</label>
-          <input type="number" class="form-control" id="inputphonenum">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" name="phone" required>
+          <div id="phoneError" class="text-danger"></div>
         </div>
         <div class="col-12">
-          <label for="inputAddress" class="form-label">Address</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+          <label for="address" class="form-label">Address</label>
+          <input type="text" class="form-control" id="address" name="address" required>
+          <div id="addressError" class="text-danger"></div>
         </div>
         <div class="col-md-12">
-          <label for="inputCity" class="form-label">Additional Information</label>
-          <textarea class="form-control" id="inputCity"></textarea>
+          <label for="additionalInfo" class="form-label">Additional Information</label>
+          <textarea class="form-control" id="additionalInfo" name="additionalInfo"></textarea>
         </div>
         <div class="col-12">
           <div class="form-check">
@@ -102,7 +106,7 @@
         </table> 
         
         
-          <button > Place Order</button>
+          <button type="submit"> Place Order</button>
       
       </div>
     </section>
