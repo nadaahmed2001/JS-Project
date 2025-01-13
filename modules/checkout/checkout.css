@@ -9,8 +9,8 @@ body{
 }
 
 #myForm {
-    width: 50%;
-   margin: 30px;
+   width: 80%; 
+   margin: auto;
    background-color: #fff;
    padding: 30px 40px;
    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
@@ -72,6 +72,7 @@ body{
 
 /*=============== CHECKOUT ===============*/
 .checkout__container {
+  
     grid-template-columns: repeat(2, 1fr);
   }
   
@@ -199,3 +200,6 @@ body{
         border: none;
         outline: none;
       }
+
+
+      
