@@ -1,5 +1,5 @@
 body{
-     background-color: #E3E6F3;  
+    background-color: #C4E0DFAD;  
     /* background-image: url(./images/hero4.png); */
 }
 
@@ -54,7 +54,7 @@ body{
 }
 
 #myForm button {
-    background-color: #007bff;
+    background-color: #088178;
     color: white;
     padding: 12px;
     font-size: 16px;
@@ -66,7 +66,7 @@ body{
 }
 
 #myForm button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #088178; /* Darker blue on hover */
 }
 
 #myForm .form-check {
