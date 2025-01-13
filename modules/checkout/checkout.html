@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check-out</title>
-    <link rel="stylesheet" href="../../style.css"> </link>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="./checkout.css"></link>
     <link rel="icon" href="../../assets/images/logo.png" type="image/x-icon" /></link>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
@@ -20,9 +20,10 @@
                 <li><a href="../../Blog_About_Pages/Blog_page.html">Blog</a></li>
                 <li><a href="../../Blog_About_Pages/About_page.html">About</a></li>
                 <li><a href="../../modules/contact/contact.html">Contact</a></li>
-                <li>
-                  <a href="../../modules/cart/cart.html" class="header__action-btn" title="Cart">
+                <li >
+                  <a href="../modules/cart/cart.html" class="header__action-btn" title="Cart">
                     <img src="../../assets/images/icon-cart.svg" alt="" />
+                    <span  class="cart__count"></span>
                   </a>
                 </li>
                   <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
@@ -30,7 +31,7 @@
         </div>
         <div id="mobile">
           <a href="../../modules/cart/cart.html" class="header__action-btn" title="Cart">
-            <img src="../../assets/images/icon-cart.svg" alt="" />
+            <img src="../../assets/images/icon-cart.svg"  alt="" />
             <span class="cart__count"></span>
           </a>
           <i id="bar" class="fa-solid fa-outdent"></i>
@@ -68,47 +69,57 @@
           </div>
         </div>
       </form>
-      <div class="cart__total">
-        <h3 class="section__title">Cart Totals</h3>
-        <table class="cart__total-table">
-          <tr>
-            <td>
-              <span class="cart__total-title cart_subtotal"
-                >Cart Subtotal</span
-              >
-            </td>
-            <td>
-              <span class="cart__total-price cart__subtotal-value"
-                >$0.00</span
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span class="cart__total-title shipping_cart">Shipping</span>
-            </td>
-            <td>
-              <span class="cart__total-price cart__shipping-value"
-                >$20.00</span
-              >
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <span class="cart__total-title grand_total">Total</span>
-            </td>
-            <td>
-              <span class="cart__total-price cart__total-value"
-                >$20.00</span
-              >
-            </td>
-          </tr>
-        </table> 
+      <div class="container checkout-summary">
+        <div class="cart__total">
+          <table class="order__table">
+            <thead>
+              <tr>
+                <th colspan="2">Products</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+  
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src="./assets/img/product-1-2.jpg"
+                    alt=""
+                    class="order__img"
+                  />
+                </td>
+                <td>
+                  <h3 class="table__title">Yidarton Women Summer Blue</h3>
+                </td>
+                <td><span class="table__price">$180.00</span></td>
+              </tr>
+  
+  
+              <tr>
+                <td><span class="order__subtitle">Subtotal</span></td>
+                <td colspan="2"><span class="table__price">$280.00</span></td>
+              </tr>
+              <tr>
+                <td><span class="order__subtitle">Shipping</span></td>
+                <td colspan="2">
+                  <span class="table__price">Free Shipping</span>
+                </td>
+              </tr>
+              <tr>
+                <td><span class="order__subtitle">Total</span></td>
+                <td colspan="2">
+                  <span class="order__grand-total">$280.00</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+          
+            <button class="btn btn--md" type="submit"> Place Order</button>
         
-        
-          <button type="submit"> Place Order</button>
-      
+        </div>
       </div>
+
     </section>
       <footer class="section-p1">
         <div class="col">
@@ -156,8 +167,9 @@
     </div>
     <div class="copyright">&copy; 2024, Tech - E-commerce</div>
     </footer>
-    <script src="../../javascript.js"></script>
-   
+    <script src="../../javascript.js" type="module"></script>
+    <script src="checkout.js" type="module"></script>
+
     
 </body>
 

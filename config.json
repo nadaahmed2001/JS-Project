@@ -1,4 +1,5 @@
 {
   "contactUsGateway": "https://jsonplaceholder.typicode.com/posts",
-  "shippingValue": 20.0
+  "shippingValue": 20.0,
+  "getProductsGateway": "./database/allProducts.json"
 }

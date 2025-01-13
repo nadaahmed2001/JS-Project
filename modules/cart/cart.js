@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalElem = document.querySelector(".cart__total-value");
   const cartTableBody = document.querySelector(".table tbody");
   let shipping = 0;
-
+  const checkoutBtn = document.querySelector("#btnCheckout");
 
   loadConfig().then(config => {
           shipping = config ? config.shippingValue : 0;})
@@ -138,4 +138,20 @@ document.addEventListener("DOMContentLoaded", () => {
       updateCartCount();
     }
   });
+ //navigate to checkout page and send subtotal , shipping and total as query parameter in url in this event
+
+    //navigate to checkout page and send subtotal , shipping and total as query parameter in url in this event
+checkoutBtn.addEventListener("click",(e)=>{
+  e.preventDefault();
+  console.log("checkout.html?subtotal="+cartSubtotalElem.textContent+"&shipping="+shipping+"&total="+totalElem.textContent);
+  window.location.href = "../checkout/checkout.html?subtotal="+cartSubtotalElem.textContent+"&shipping="+shipping+"&total="+totalElem.textContent;
 });
+
+});
+
+function updateCartCount () {
+  const totalCount = cart.reduce((count, item) => count + item.quantity, 0); 
+  const cartCountElement = document.querySelector('.cart__count'); 
+  cartCountElement.textContent = totalCount;
+}
+

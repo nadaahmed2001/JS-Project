@@ -1,133 +1,83 @@
-// Create a new XMLHttpRequest object
-var xhr = new XMLHttpRequest();
+import { loadConfig } from "../../javascript.js";
 
+function fetchProducts(url) {
+  return fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error fetching the JSON file');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}
 
-xhr.open('GET', './database/allProducts.json', true);
-
-
-
-xhr.onload = function () {
-
-  if (xhr.status === 200) {
-
-
-    var data = JSON.parse(xhr.responseText);
-
-    var proContainer = document.querySelector('.pro-container');
-    data.forEach(function (product) {
-      if(product.isFeatured == 'true'){
-
-      var productHTML = `
-                <div class="pro">
-                    <img src="${product.image}" alt="Product Image"
-                      onClick="window.location.href='./shop-pages/singleProduct.html?id=${product.id}'"
-                      >
-                    <div class="des">
-                        <span>Brand Name</span>
-                        <h5>${product.name}</h5> <!-- Dynamically inserting the name -->
-                        <div class="star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <h4>$${product.price}</h4> <!-- Dynamically inserting the price -->
-                    </div>
-                    <a>                
-                    <i class="fa-solid fa-cart-shopping cart" 
-                   data-id="${product.id}"
-                   data-name="${product.name}"
-                   data-price="${product.price}"
-                   data-image="${product.image}">
-                </i></a>
-                </div>
-            `;
+// Function to render products based on a given container
+function renderProducts(data, containerSelector, isFeatured) {
+  const container = document.querySelector(containerSelector);
+  
+  data.forEach(product => {
+    // Check if the product matches the 'featured' condition
+    if (product.isFeatured === isFeatured) {
+      const productHTML = `
+        <div class="pro">
+          <img src="${product.image}" alt="Product Image" onClick="window.location.href='./shop-pages/singleProduct.html?id=${product.id}'">
+          <div class="des">
+            <span>Brand Name</span>
+            <h5>${product.name}</h5> <!-- Dynamically inserting the name -->
+            <div class="star">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h4>$${product.price}</h4> <!-- Dynamically inserting the price -->
+          </div>
+          <a>
+            <i class="fa-solid fa-cart-shopping cart"
+               data-id="${product.id}"
+               data-name="${product.name}"
+               data-price="${product.price}"
+               data-image="${product.image}">
+            </i>
+          </a>
+        </div>
+      `;
       
-      // Append the new product HTML to the container
-      proContainer.innerHTML += productHTML;
+      container.innerHTML += productHTML;
+    }
+  });
+}
+
+(async function () {
+  try {
+    const data = await fetchProducts('./database/allProducts.json');
+    
+    renderProducts(data, '.pro-container', 'true');
+    renderProducts(data, '.pro-container2', 'false');
+  } catch (error) {
+    console.error('Error loading products:', error);
+  }
+})();
+
+
+function getProducts() {
+  loadConfig().then(config => {
+    const url = config ? config.getProductsGateway : "";
+    (async function () {
+      try {
+        const data = await fetchProducts(url || './database/allProducts.json');
+        renderProducts(data, '.pro-container', 'true');
+        renderProducts(data, '.pro-container2', 'false');
+      } catch (error) {
+        console.error('Error loading products:', error);
       }
-    });
-
-  }
-  else {
-    console.error('Error fetching the JSON file');
-  }
-};
+    })();
+  }).catch(error => {
+    console.error('Error loading config:', error);
+  });
+}
 
 
-xhr.onerror = function (error) {
-
-  console.error(error);
-};
-
-
-xhr.send();
-
-////
-
-var xhr2 = new XMLHttpRequest();
-
-
-xhr2.open('GET', './database/allProducts.json', true);
-
-
-
-xhr2.onload = function () {
-
-  if (xhr2.status === 200) {
-
-
-    var data2 = JSON.parse(xhr2.responseText);
-
-    var proContainer2 = document.querySelector('.pro-container2');
-    data2.forEach(function (product) {
-      if(product.isFeatured == 'false'){
-      var productHTML = `
-                <div class="pro">
-                    <img src="${product.image}" alt="Product Image"
-                      onClick="window.location.href='./shop-pages/singleProduct.html?id=${product.id}'"
-                      >
-                    <div class="des">
-                        <span>Brand Name</span>
-                        <h5>${product.name}</h5> <!-- Dynamically inserting the name -->
-                        <div class="star">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <h4>$${product.price}</h4> <!-- Dynamically inserting the price -->
-                    </div>
-                    <a href="#">
-                    
-                    <a>                
-                    <i class="fa-solid fa-cart-shopping cart" 
-                   data-id="${product.id}"
-                   data-name="${product.name}"
-                   data-price="${product.price}"
-                   data-image="${product.image}">
-                </i></a>
-                </div>
-            `;
-
-      // Append the new product HTML to the container
-      proContainer2.innerHTML += productHTML;
-      }
-    });
-
-  }
-  else {
-    console.error('Error fetching the JSON file');
-  }
-};
-
-
-xhr2.onerror = function (error) {
-
-  console.error(error);
-};
-
-
-xhr2.send();
