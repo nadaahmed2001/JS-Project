@@ -1,6 +1,6 @@
 body{
-     background-color: #E3E6F3; 
-    /* background-image: url(./images/hero4.png); */
+      background-color: #C4E0DFAD;  
+
 }
 
 #myForm {
@@ -58,11 +58,11 @@ body{
 }
 
 #myForm .input-group-text i {
-    color: #007bff; /* Eye icon color */
+    color: #088178; /* Eye icon color */
 }
 
 #myForm button {
-    background-color: #007bff;
+    background-color: #088178;
     color: white;
     padding: 12px;
     font-size: 16px;
@@ -74,7 +74,7 @@ body{
 }
 
 #myForm button:hover {
-    background-color: #0056b3;
+    background-color: #07746c;
 }
 
 @media (max-width: 600px) {
