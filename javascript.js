@@ -1,4 +1,4 @@
-export function loadConfig() {
+export function loadConfig() { //This function was for Contact form but now is replaced with EmailJS
   return fetch('../../config.json')
       .then(response => {
           if (!response.ok) {

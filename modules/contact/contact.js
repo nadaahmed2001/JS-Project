@@ -1,79 +1,88 @@
-import { loadConfig } from "../../javascript.js";
 
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.querySelector('#contact-form');
-    const successAlert = document.querySelector('.contact-success-alert');
-    let contactUsGateway = "";  // Initialize the variable
-
-    // Form validation logic
-    const validators = {
-        'first-name': (value) => value.trim() ? '' : 'First name is required.',
-        'last-name': (value) => value.trim() ? '' : 'Last name is required.',
-        'email': (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim()) ? '' : 'Please enter a valid email address.',
-        'phone': (value) => /^\d{10}$/.test(value.trim()) ? '' : 'Please enter a valid phone number.',
-        'message': (value) => value.trim() ? '' : 'Message is required.',
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Select inputs
+    const firstNameField = document.getElementById("first-name");
+    const emailField =document.getElementById("email");
+    const phoneField = document.getElementById("phone");
+    const messageField = document.getElementById("message");
+  
+    // Clear previous error messages
+    clearErrors();
+  
+    let isValid = true;
+  
+    // First Name Validation
+    if (firstNameField.value.trim().length < 2) {
+      showError(firstNameField, 'First Name must be at least 2 characters.');
+      isValid = false;
+    }
+  
+    // Email Validation
+    if (!/\S+@\S+\.\S+/.test(emailField.value.trim())) {
+      showError(emailField, 'Please enter a valid email address.');
+      isValid = false;
+    }
+    // Phone Number Validation
+    if ((/^\d{11}$/.test(phoneField.value.trim())) == false) {
+     console.log(/^\d{10}$/.test(phoneField.value.trim()))
+      showError(phoneField, 'Phone Number must be 10 digits.');
+      isValid = false;
+    }
+  
+    // Message Validation
+    if (messageField.value.trim().length < 10) {
+      showError(messageField, 'Message must be at least 10 characters.');
+      isValid = false;
+    }
+  
+    // If valid, send email
+    if (isValid) {
+      sendMail();
+    }
+  });
+  
+  // Function to clear previous error messages
+  function clearErrors() {
+    document.querySelectorAll('.error-message').forEach((span) => {
+      span.style.display = 'none';
+    });
+    document.querySelectorAll('input, textarea').forEach((input) => {
+      input.classList.remove('error');
+    });
+  }
+  
+  // Function to show an error message for a field
+  function showError(input, message) {
+    const errorSpan = input.nextElementSibling; // Get the <span> right after the input
+    errorSpan.textContent = message;
+    errorSpan.style.display = 'block';
+    input.classList.add('error');
+  }
+  
+  
+export function sendMail(){
+    var params={
+        firstName: document.getElementById("first-name").value,
+        lastName: document.getElementById("last-name").value,
+        phoneNum: document.getElementById("phone").value,
+        email: document.getElementById("email").value,
+        msgContent: document.getElementById("message").value,
     };
 
-    form.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        clearErrors();
+    const serviceID= "service_11foc4r";
+    const templateID= "template_58bk2o4";
 
-        const isValid = validateForm();
-        if (!isValid) return;
+    emailjs.send(serviceID,templateID,params)
+    .then(res=>{
+        // document.getElementById("first-name").value="";
+        // document.getElementById("last-name").value="";
+        // document.getElementById("phone").value="";
+        // document.getElementById("email").value="";
+        // document.getElementById("message").value="";
+        console.log(res);
+        alert ("Your message was sent for our owners and we will contact you as soon as possible");
+    }).catch(error=>console.log(error));
+}//End sendMail
 
-        try {
-            // Wait for the config to be loaded before assigning
-            const config = await loadConfig();
-            contactUsGateway = config ? config.contactUsGateway : "";
-            console.log(contactUsGateway);  // Now this will have the correct value
-
-            const formData = new FormData(form);
-            const response = await fetch(contactUsGateway, {
-                method: 'POST',
-                body: formData,
-                headers: { Accept: 'application/json' },
-            });
-
-            if (!response.ok) throw new Error('Form submission failed');
-
-            form.reset();
-            showSuccessAlert();
-        } catch (error) {
-            console.error(error);
-        }
-    });
-
-    // Helper functions
-    function validateForm() {
-        let isValid = true;
-
-        Object.keys(validators).forEach((fieldId) => {
-            const field = document.getElementById(fieldId);
-            const errorMessage = validators[fieldId](field.value);
-            if (errorMessage) {
-                isValid = false;
-                showError(field, errorMessage);
-            }
-        });
-
-        return isValid;
-    }
-
-    function showError(input, message) {
-        const error = document.createElement('p');
-        error.className = 'error-message';
-        error.style.color = 'red';
-        error.style.fontSize = '0.9em';
-        error.textContent = message;
-        input.parentElement.appendChild(error);
-    }
-
-    function clearErrors() {
-        document.querySelectorAll('.error-message').forEach((el) => el.remove());
-    }
-
-    function showSuccessAlert() {
-        successAlert.style.display = 'block';
-        successAlert.textContent = 'Your response is successfully submitted';
-    }
-});
+window.sendMail = sendMail;

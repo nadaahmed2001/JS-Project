@@ -694,3 +694,17 @@ input {
   padding: 1em; /* Add some padding */
   font-size: 1.2em; /* Slightly larger text */
 }
+
+
+
+/* error msg */
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: none; /* Hide by default */
+}
+
+input.error, textarea.error {
+  border: 2px solid red;
+}

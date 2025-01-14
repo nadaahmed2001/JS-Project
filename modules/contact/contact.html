@@ -85,6 +85,7 @@
                     >
                       <p class="text-blk input-title">First name</p>
                       <input class="input" id="first-name" name="FirstName" />
+                      <span class="error-message"></span>
                     </div>
                     <div
                       class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12"
@@ -97,12 +98,14 @@
                     >
                       <p class="text-blk input-title">Email</p>
                       <input class="input" id="email" name="Email" />
+                      <span class="error-message"></span>
                     </div>
                     <div
                       class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12"
                     >
                       <p class="text-blk input-title">Phone number</p>
                       <input class="input" id="phone" name="PhoneNumber" />
+                      <span class="error-message"></span>
                     </div>
                     <div
                       class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12"
@@ -116,17 +119,32 @@
                         id="message"
                         placeholder="Please enter query..."
                       ></textarea>
+                      <span class="error-message"></span>
                     </div>
                   </div>
                   <div class="btn-wrapper">
                     <div class="alert alert-success contact-success-alert" style="display: none;" role="alert">
                       Your respone is successfully submitted
                     </div>
-                    <button type="submit" class="btn flex btn__md">
-                      Submit
-                    </button>
+                    <button type="Submit" id="submitBtn" class="btn flex btn__md">Submit</button>
                   </div>
                 </div>
+
+
+
+                <script
+                type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+              ></script>
+              <script type="text/javascript">
+                (function () {
+                  emailjs.init({
+                    publicKey: "GC4G9jWTtgQhiN7Pr",
+                  });
+                })();
+              </script>
+              
+
               </form>
             </div>
             <div
@@ -242,6 +260,6 @@
     <!--=============== SWIPER JS ===============-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../../javascript.js" type="module"></script>
-    <script src="contact.js" type="module"></script>
+     <script src="contact.js" type="module"></script>
   </body>
 </html>
