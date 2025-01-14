@@ -1,0 +1,165 @@
+{
+    "product":
+[
+    {
+        "id":1,
+        "image": "../images/f1.jpg",
+        "name": "Cosmic Dreamer Vibes",
+        "price": "97",
+        "gender":"man",
+        "isFeatured":"true",
+        "newArrival":"false",
+        "description": "Made from 100% premium cotton, this product offers a breathable and ultra-soft feel, perfect for day-to-night wear. Its cosmic-inspired design features dreamy, celestial patterns that make it a must-have for those who love to express their creativity.Durable stitching and fade-resistant prints ensure lasting quality for your cosmic adventures."
+    },
+    {
+        "id":2,
+        "image": "../images/f2.jpg",
+        "name": "Lost In Space",
+        "price": "109",
+        "gender":"man",
+        "isFeatured":"true",
+        "newArrival":"false",
+        "description":"Whether you're lounging at home or exploring the city, this cosmic-themed item brings comfort and style together. Designed for dreamers, it features an intricate galaxy motif, crafted with sustainable materials for an eco-friendly choice."
+    },
+    {
+        "id":3,
+        "image": "../images/f3.jpg",
+        "name": "Galaxy Explorer Mode",
+        "price": "117",
+        "gender":"woman",
+        "isFeatured":"true",
+        "newArrival":"false",
+        "description":"Explore the mysteries of the universe with this unique piece, crafted from high-quality, lightweight fabric. The \"Lost in Space\" design features detailed space-inspired artwork, perfect for adding a touch of wonder to your wardrobe."
+    },
+    {
+        "id":4,
+        "image": "../images/f4.jpg",
+        "name": "Stellar Adventure Begins",
+        "price": "119",
+        "gender":"woman",
+        "isFeatured":"true",
+        "newArrival":"false",
+        "description": "This product is ideal for anyone who loves space exploration and modern streetwear. Made with 95% organic cotton and 5% spandex, it offers a tailored fit with just the right amount of stretch for comfort."
+    },
+    {
+        "id":5,
+        "image": "../images/f5.jpg",
+        "name": "Interstellar Journey Ahead",
+        "price": "80",
+        "gender":"man",
+        "isFeatured":"true",
+        "newArrival":"false",
+        "description":"Embrace your adventurous side with this stylish piece. Featuring a high-definition galaxy print, this product is crafted from moisture-wicking fabric, making it ideal for outdoor activities or casual outings."
+    },
+    {
+        "id":6,
+        "image": "../images/f6.jpg",
+        "name": "Cartoon Astronaut T-shirt",
+        "price": "115",
+        "gender":"woman",
+        "isFeatured":"true",
+        "newArrival":"false",
+        "description":"The \"Galaxy Explorer Mode\" product is more than just fashion – it’s a lifestyle. Designed with reinforced seams and a double-stitched hem, it’s built to last through all your adventures. Soft on the skin and vibrant in design, it’s perfect for anyone inspired by the cosmos."
+    },
+    {
+        "id":7,
+        "image": "../images/f7.jpg",
+        "name": "Cartoon Astronaut Pants",
+        "price": "77",
+        "gender":"woman",
+        "isFeatured":"true",
+        "newArrival":"false",
+        "description":"Crafted with adventurers in mind, this piece combines lightweight fabric with a breathable design for all-day comfort. The stellar-themed print adds a touch of excitement and inspiration to your wardrobe."
+    },
+    {
+        "id":8,
+        "image": "../images/f8.jpg",
+        "name": "Moonwalker On Duty",
+        "price": "88",
+        "gender":"woman",
+        "isFeatured":"true",
+        "newArrival":"false",
+        "description":"Designed for those who love to reach for the stars, this product features 100% combed cotton for an ultra-smooth texture. Its vibrant, fade-proof colors ensure it stays bold through every wash."
+    },
+    {
+        "id":9,
+        "image": "../images/n1.jpg",
+        "name": "Class In Action",
+        "price": "172",
+        "gender":"man",
+        "isFeatured":"false",
+        "newArrival":"true",
+        "description":"Make every step of your interstellar journey stylish and comfortable with this product. Made from ethically sourced materials, it’s soft, durable, and designed to keep you moving."
+    },
+    {
+        "id":10,
+        "image": "../images/n2.jpg",
+        "name": "Simply Refined Style",
+        "price": "199",
+        "gender":"man",
+        "isFeatured":"false",
+        "newArrival":"true",
+        "description":"With a focus on functionality and design, this piece features moisture-absorbing fabric, keeping you cool and dry during active moments. The interstellar design is printed using eco-friendly dyes for a sustainable yet stunning look."
+    },
+    {
+        "id":11,
+        "image": "../images/n3.jpg",
+        "name": "Exquisite Sophistication Defined",
+        "price": "122",
+        "gender":"man",
+        "isFeatured":"false",
+        "newArrival":"true",
+        "description":" Celebrate your love for space with this lightweight and comfortable t-shirt. The vibrant astronaut print is screen-printed with eco-safe dyes, ensuring both style and sustainability."
+    },
+    {
+        "id":12,
+        "image": "../images/n4.jpg",
+        "name": "Timeless Elegance Always",
+        "price": "111",
+        "gender":"man",
+        "isFeatured":"false",
+        "newArrival":"true",
+        "description":"These comfortable, casual pants are made from a blend of cotton and polyester for durability and stretch. Featuring a cute astronaut motif, they are perfect for lounging at home or casual outings."
+    },
+    {
+        "id":13,
+        "image": "../images/n5.jpg",
+        "name": "Graceful And Polished",
+        "price": "149",
+        "gender":"man",
+        "isFeatured":"false",
+        "newArrival":"true",
+        "description":"Designed for everyday wear, these pants include an elastic waistband and adjustable drawstring for a customized fit. The cartoon astronaut print adds a touch of fun and whimsy."
+    },
+    {
+        "id":14,
+        "image": "../images/n6.jpg",
+        "name": "Elegance Through Simplicity",
+        "price": "99",
+        "gender":"man",
+        "isFeatured":"false",
+        "newArrival":"true",
+        "description":"Step into the future with this space-inspired product. The sleek design features high-quality fabric, ensuring both durability and comfort for all-day wear."
+    },
+    {
+        "id":15,
+        "image": "../images/n7.jpg",
+        "name": "Uncompromising Quality Always",
+        "price": "100",
+        "gender":"man",
+        "isFeatured":"false",
+        "newArrival":"true",
+        "description":"This adorable t-shirt features a playful cartoon astronaut design, perfect for kids and adults alike. Made with 100% cotton, it’s soft, breathable, and ideal for casual outings or layering under a jacket."
+    },
+    {
+        "id":16,
+        "image": "../images/n8.jpg",
+        "name": "Refined Yet Bold",
+        "price": "103",
+        "gender":"man",
+        "isFeatured":"false",
+        "newArrival":"true",
+        "description":"This adorable t-shirt features a playful cartoon astronaut design, perfect for kids and adults alike. Made with 100% cotton, it’s soft, breathable, and ideal for casual outings or layering under a jacket."
+    }
+]
+}

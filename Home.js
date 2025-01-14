@@ -1,6 +1,7 @@
-import { loadConfig } from "../../javascript.js";
+// import { loadConfig } from "../../javascript.js";
 
 function fetchProducts(url) {
+  console.log(`Fetching from URL: ${url}`);
   return fetch(url)
     .then(response => {
       if (!response.ok) {
@@ -53,7 +54,7 @@ function renderProducts(data, containerSelector, isFeatured) {
 
 (async function () {
   try {
-    const data = await fetchProducts('./database/allProducts.json');
+    const data = await fetchProducts('http://localhost:3000/product');
     
     renderProducts(data, '.pro-container', 'true');
     renderProducts(data, '.pro-container2', 'false');
@@ -68,7 +69,7 @@ function getProducts() {
     const url = config ? config.getProductsGateway : "";
     (async function () {
       try {
-        const data = await fetchProducts(url || './database/allProducts.json');
+        const data = await fetchProducts(url || 'http://localhost:3000/product');
         renderProducts(data, '.pro-container', 'true');
         renderProducts(data, '.pro-container2', 'false');
       } catch (error) {
