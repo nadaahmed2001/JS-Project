@@ -153,5 +153,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
   });
+
+
+
+  //  // Redirect to payment page with query parameters
+  //  document.getElementById("placeOrderBtn").addEventListener("click", (e) => {
+  //   e.preventDefault();
+
+  //   // Fetch totals from the table (replace these selectors with your actual table structure if different)
+  //   const subtotal = document.querySelector("tr:nth-last-child(3) .table__price").textContent.trim();
+  //   const shipping = document.querySelector("tr:nth-last-child(2) .table__price").textContent.trim();
+  //   const total = document.querySelector("tr:last-child .order__grand-total").textContent.trim();
+
+  //   // Build the URL with query parameters
+  //   const paymentPageUrl = `payment.html?subtotal=${encodeURIComponent(subtotal)}&shipping=${encodeURIComponent(shipping)}&total=${encodeURIComponent(total)}`;
+
+  //   // Redirect to the payment page
+  //   window.location.href = paymentPageUrl;
+  // });
+
+
+
+//   document.getElementById("placeOrderBtn").addEventListener("click", (e) => {
+//     e.preventDefault();
+
+//     // Fetch totals from the table (replace these selectors with your actual structure)
+//     const subtotal = document.querySelector("tr:nth-last-child(3) .table__price").textContent.trim();
+//     const shipping = document.querySelector("tr:nth-last-child(2) .table__price").textContent.trim();
+//     const total = document.querySelector("tr:last-child .order__grand-total").textContent.trim();
+
+//     // Encode and build the URL
+//     const paymentPageUrl = `payment.html?subtotal=${encodeURIComponent(subtotal)}&shipping=${encodeURIComponent(shipping)}&total=${encodeURIComponent(total)}`;
+
+//     // Redirect to the payment page
+//     window.location.href = paymentPageUrl;
+// });
   
-  
+
+
+document.getElementById("placeOrderBtn").addEventListener("click", (e) => {
+  e.preventDefault();
+
+  // Fetch totals from the table (replace these selectors with your actual structure)
+  const subtotal = document.querySelector("tr:nth-last-child(3) .table__price").textContent.trim();
+  const shipping = document.querySelector("tr:nth-last-child(2) .table__price").textContent.trim();
+  const total = document.querySelector("tr:last-child .order__grand-total").textContent.trim();
+
+  // Encode and build the URL for Node.js server route
+  const paymentPageUrl = `http://localhost:3000?subtotal=${encodeURIComponent(subtotal)}&shipping=${encodeURIComponent(shipping)}&total=${encodeURIComponent(total)}`;
+
+  // Redirect to the Node.js route which will render the EJS page
+  window.location.href = paymentPageUrl;
+});
