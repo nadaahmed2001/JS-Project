@@ -29,6 +29,7 @@ xhr.onload = function () {
     // Gender filter buttons
     const btnMan = document.querySelector('.btn-man');
     const btnWomen = document.querySelector('.btn-women');
+    const btnAll = document.querySelector('.btn-all');
 
     // Gender filter state
     let selectedGender = null;
@@ -44,11 +45,18 @@ xhr.onload = function () {
       filterByGender();
     });
 
+    btnAll.addEventListener('click', () => {
+      selectedGender = '';
+      filterByGender();
+    });
+
     // Function to filter products based on selected gender
     function filterByGender() {
       if (selectedGender) {
         filteredProducts = allProducts.filter(pro => pro.gender === selectedGender);
-      } else {
+      }
+      
+      else {
         filteredProducts = [...allProducts];
       }
 

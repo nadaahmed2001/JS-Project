@@ -4,7 +4,7 @@ const productId = urlParams.get("id");
 
 if (productId) {
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "../database/allProducts.json", true);
+  xhr.open("GET", "http://localhost:3000/product", true);
 
   xhr.onload = function () {
     if (xhr.status === 200) {
