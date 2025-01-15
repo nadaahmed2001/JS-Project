@@ -358,7 +358,9 @@ table {
   color: white;
   padding: 5px;
 }
-
+.btn-check :hover{
+  color: 088178;
+}
 /* For medium devices */
 @media screen and (max-width: 992px) {
   .container {

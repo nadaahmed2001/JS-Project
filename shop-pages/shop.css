@@ -1,0 +1,70 @@
+.search{
+display: flex;
+justify-content: center;
+}
+.search input{
+   width: 700px;
+   height: 50px;
+   border:1px solid #088178;
+   margin: 50px 0;
+   
+}
+.search button{
+    width: 200px;
+    height: 50px;
+    background-color: #088178;
+    border: none;
+    color: white;
+    margin: 50px 0;
+    font-size: 25px;
+    
+}
+.search button:hover{
+    background-color: #146b66;
+    color: white;
+   
+}
+.hide{
+    display: none;
+}
+
+.filter h3{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.filter-btn{
+    display: flex;
+    justify-content: center;
+}
+.filter-btn .btn-man{
+    width: 200px;
+    height: 50px;
+    background-color: #088178;
+    border: none;
+    color: white;
+    margin: 20px ;
+    font-size: 25px;
+   
+}
+.filter-btn .btn-women{
+    width: 200px;
+    height: 50px;
+    background-color: #088178;
+    border: none;
+    color: white;
+    margin: 20px ;
+    font-size: 25px;  
+}
+.filter-btn .btn-all
+{
+   
+        width: 200px;
+        height: 50px;
+        background-color: #088178;
+        border: none;
+        color: white;
+        margin: 20px ;
+        font-size: 25px;  
+   
+}
