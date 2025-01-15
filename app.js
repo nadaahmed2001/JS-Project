@@ -3,14 +3,22 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const paypal = require('./modules/checkout/paypal');
+app.use('/assets', express.static('assets'));
+
 
 
 
 // Set up EJS and views directory
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'modules/checkout'));
-app.use(express.static(path.join(__dirname, 'assets')));
-
+//app.use('/assets', express.static(path.join(__dirname, 'assets/css')));
+app.use('/assets/css', express.static('assets/css', {
+  setHeaders: (res, path) => {
+    if (path.endsWith('.css')) {
+      res.set('Content-Type', 'text/css');
+    }
+  }
+}));
 // Home route
 app.get('/', (req, res) => {
     const subtotal = req.query.subtotal;

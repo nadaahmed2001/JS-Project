@@ -27,8 +27,8 @@ async function generateAccessToken() {
 }
 
 // generateAccessToken();
-console.log('Client ID:', process.env.PAYPAL_CLIENT_ID);
-console.log('Secret:', process.env.PAYPAL_SECRET);
+// console.log('Client ID:', process.env.PAYPAL_CLIENT_ID);
+// console.log('Secret:', process.env.PAYPAL_SECRET);
 
 
 
