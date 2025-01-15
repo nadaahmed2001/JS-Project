@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartSubtotalElem = document.querySelector(".cart__subtotal-value");
   const totalElem = document.querySelector(".cart__total-value");
   const cartTableBody = document.querySelector(".table tbody");
-  let shipping = 0;
+  let shipping = 20;
   const checkoutBtn = document.querySelector("#btnCheckout");
 
   loadConfig().then(config => {
@@ -62,6 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const total = subtotal + shipping;
+
+    console.log(total)
     cartSubtotalElem.textContent = `$${subtotal.toFixed(2)}`;
     totalElem.textContent = `$${total.toFixed(2)}`;
   }
